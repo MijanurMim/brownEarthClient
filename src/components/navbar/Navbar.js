@@ -33,10 +33,10 @@ const Navbar = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <div className="sticky top-0 left-0 z-50 w-full   shadow-sm">
-      <div className=" mx-36  items-center justify-between self-center  bg-white py-2 dark:bg-slate-600 md:flex    ">
+    <div className="sticky top-0 left-0 z-50  w-full   bg-stone-200 shadow-sm">
+      <div className=" items-center  justify-between self-center py-2   dark:bg-slate-600 md:flex lg:mx-36    ">
         {/* Navbar title and logo  */}
-        <div className="   flex cursor-pointer items-start justify-start   ">
+        <div className="ml-10 flex   cursor-pointer items-start justify-start lg:ml-0   ">
           <span className="  ">
             <img
               src={logo}
@@ -55,7 +55,7 @@ const Navbar = () => {
           {open ? <IoCloseSharp /> : <IoMenuSharp />}
         </div>
 
-        <div className="tracking-wide ">
+        <div className="lg:tracking-wide ">
           {/* Navbar Items  */}
           <ul
             className={`lg-px-5 absolute  z-[-1] w-full  px-10 pb-12  transition-all  duration-500 ease-in  md:static   md:z-auto md:flex md:items-center md:space-x-1 md:pb-0 lg:space-x-8 
@@ -162,13 +162,13 @@ const Navbar = () => {
         </div>
 
         {/* SOCIAL MEDIA ICONS  */}
-        <div className="flex cursor-pointer justify-center gap-1 text-2xl">
+        <div className="mr-10 ml-20 flex cursor-pointer justify-center gap-1 text-xl lg:ml-0 lg:mr-0    lg:text-2xl">
           <ul className="flex items-center justify-center gap-1 ">
             <li className="text-blue-500 duration-200 hover:scale-105 hover:text-blue-600">
               <BsFacebook />
             </li>
             <li className=" duration-200 hover:scale-105">
-              <img className="h-8" src={instaicon} alt="" />
+              <img className="h-5 lg:h-8" src={instaicon} alt="" />
             </li>
             <li className="text-green-500 duration-200 hover:scale-105 hover:text-green-600 ">
               <BsWhatsapp />

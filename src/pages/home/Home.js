@@ -16,19 +16,18 @@ const Home = () => {
       <Slider />
 
       {/* landowner section  */}
-      <div className=" my-10 mx-36 grid grid-cols-1  gap-2      lg:grid-cols-4  lg:gap-6  ">
+      <div className="m-10 grid grid-cols-1 gap-4 md:grid-cols-4  lg:my-10      lg:mx-36  lg:gap-6  ">
         <div></div>
         <Link
           to="/contact"
-          className="flex cursor-pointer flex-col items-center justify-center "
+          className="flex cursor-pointer flex-col items-center justify-center bg-stone-100 p-10   text-stone-600 shadow-lg duration-300 hover:scale-105 dark:bg-slate-500 dark:text-slate-200 2xl:p-20"
         >
-          <div className="border text-6xl">
+          <div className="text-4xl xl:text-6xl">
             <BiLandscape />
           </div>
-
-          <div className="bg-stone-100 p-6 text-xl  text-stone-600 shadow-lg duration-300 hover:scale-105 dark:bg-slate-500 dark:text-slate-200">
-            LANDOWNER
-            <div>Realize the full potential of your Land.</div>
+          <div className="xl:text-xl">LANDOWNER</div>
+          <div className="text-sm">
+            Realize the full potential of your Land.
           </div>
         </Link>
 
@@ -36,29 +35,29 @@ const Home = () => {
           to="/contact"
           className="flex cursor-pointer flex-col items-center justify-center bg-stone-100 p-6  text-stone-600 shadow-lg duration-300 hover:scale-105 dark:bg-slate-500 dark:text-slate-200"
         >
-          <div className="text-4xl">
+          <div className="text-6xl">
             <TbHomeDollar />
           </div>
           <div className="text-xl">BUYER</div>
-          <div>Let us show you the possibilities.</div>
+          <div className="text-sm">Let us show you the possibilities.</div>
         </Link>
 
         <Link
           to="contact"
           className="flex cursor-pointer flex-col items-center justify-center bg-stone-100 p-6  text-stone-600 shadow-lg duration-300 hover:scale-105 dark:bg-slate-500 dark:text-slate-200"
         >
-          <div className="text-4xl">
+          <div className="text-6xl">
             {" "}
             <TbBrandGoogleBigQuery />
           </div>
           <div className="text-xl">OTHERS</div>
-          <div> Get in touch with us. </div>
+          <div className="text-sm"> Get in touch with us. </div>
         </Link>
       </div>
 
       {/* Features Work Section  */}
-      <div className="my-10 mx-36 grid grid-cols-1  gap-2      lg:grid-cols-4  lg:gap-6  ">
-        <div className="flex text-3xl    uppercase tracking-wider text-stone-600 dark:text-slate-200   md:items-center lg:text-4xl ">
+      <div className="m-10  grid grid-cols-1 gap-2 lg:mx-36  lg:my-10      lg:grid-cols-4  lg:gap-6  ">
+        <div className="flex text-3xl    uppercase tracking-wider text-stone-600 dark:text-slate-200   md:items-center lg:text-4xl	 ">
           FEATURED <br /> WORK
         </div>
 
@@ -122,7 +121,7 @@ const Home = () => {
       </div>
 
       {/* Video Section  */}
-      <div className="my-10 mx-36 grid grid-cols-1  gap-2      lg:grid-cols-4  lg:gap-6  ">
+      <div className="m-10 grid grid-cols-1 gap-2 lg:my-10  lg:mx-36      lg:grid-cols-4  lg:gap-6  ">
         <div></div>
         <div className="col-span-3 aspect-video ">
           {" "}

@@ -29,7 +29,7 @@ const Slider = () => {
           // }}
           // navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="xl:h-screen"
+          className="3xl:h-screen "
         >
           <SwiperSlide>
             <img className="w-full object-cover  " src={sliderImg1} alt="" />
