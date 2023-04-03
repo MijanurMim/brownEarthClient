@@ -1,11 +1,16 @@
 import React from "react";
 
+import { motion } from "framer-motion";
 import contactCover from "../../resources/slider/3.jpg";
 import ContactForm from "./ContactForm";
-
 const Contact = () => {
   return (
-    <div className="dark:bg-slate-600">
+    <motion.div
+      className="dark:bg-slate-600"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
       {/* Hero section  */}
       <div className="group relative ">
         <img
@@ -18,7 +23,7 @@ const Contact = () => {
         </div>
       </div>
       <ContactForm />
-    </div>
+    </motion.div>
   );
 };
 

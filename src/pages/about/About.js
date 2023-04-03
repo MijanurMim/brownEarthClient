@@ -1,11 +1,38 @@
-import React from "react";
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect } from "react";
 import aboutCover2 from "../../resources/project/1.jpg";
 import aboutCover3 from "../../resources/project/3.jpg";
 import aboutCover from "../../resources/slider/1.jpg";
+// import {} from "framer-motion/dist/framer-motion.dev";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.2,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({ x: "-100vw" });
+    }
+  }, [inView, animation]);
+
   return (
-    <div className="dark:bg-slate-600">
+    <motion.div
+      className="dark:bg-slate-600"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
       {/* about cover section  */}
       <div className="group relative ">
         <img
@@ -60,8 +87,8 @@ const About = () => {
       </div>
 
       {/* Design Excellence section  */}
-      <div className="m-6  lg:m-20 2xl:m-36">
-        <div className="my-6 flex flex-col">
+      <div ref={ref} className="m-6  lg:m-20 2xl:m-36">
+        <motion.div animate={animation} className="my-6 flex flex-col">
           <span className="text-4xl text-stone-600 dark:text-slate-200">
             Design Excellence
           </span>
@@ -69,9 +96,12 @@ const About = () => {
             Our buildings are characterized by their avant-garde design with
             contemporary lines and a clean look
           </span>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 font-light  dark:text-slate-200 lg:grid-cols-3">
+        <motion.div
+          animate={animation}
+          className="grid grid-cols-1 gap-6 font-light  dark:text-slate-200 lg:grid-cols-3"
+        >
           <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
             provident. Blanditiis rerum veritatis, ipsam eveniet magni
@@ -90,7 +120,7 @@ const About = () => {
             culpa temporibus, eius sint sequi voluptatum minus laboriosam
             debitis autem reprehenderit quasi fuga.
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div>
@@ -144,7 +174,7 @@ const About = () => {
           <div className="textx">Hello World</div>
         </div>
       </div> */}
-    </div>
+    </motion.div>
   );
 };
 

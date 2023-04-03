@@ -1,18 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BiLandscape } from "react-icons/bi";
 import { TbBrandGoogleBigQuery, TbHomeDollar } from "react-icons/tb";
 import Slider from "../../components/slider/Slider";
 
-import featured2 from "../../resources/project/urbanica.1.jpg";
-import featured1 from "../../resources/project/urbanica2.jpg";
+import featured2 from "../../resources/urbanica1.jpg";
+import featured1 from "../../resources/urbanica2.jpg";
 
 import ReactPlayer from "react-player";
 
 import { Link } from "react-router-dom";
 
+import { motion, useAnimation } from "framer-motion";
+// import {} from "framer-motion/dist/framer-motion.dev";
+import { useInView } from "react-intersection-observer";
+
 const Home = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.2,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({ x: "-100vw" });
+    }
+  }, [inView, animation]);
   return (
-    <div className="dark:bg-slate-600">
+    <motion.div
+      className="dark:bg-slate-600"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
       <Slider />
 
       {/* landowner section  */}
@@ -56,19 +83,25 @@ const Home = () => {
       </div>
 
       {/* Features Work Section  */}
-      <div className="m-10  grid grid-cols-1 gap-2 lg:mx-36  lg:my-10      lg:grid-cols-4  lg:gap-6  ">
+      <div
+        ref={ref}
+        className="m-10  grid grid-cols-1 gap-2 lg:mx-36  lg:my-10      lg:grid-cols-4  lg:gap-6  "
+      >
         <div className="flex text-3xl    uppercase tracking-wider text-stone-600 dark:text-slate-200   md:items-center lg:text-4xl	 ">
           FEATURED <br /> WORK
         </div>
 
-        <div className="group relative cursor-pointer">
+        <motion.div
+          animate={animation}
+          className="group relative cursor-pointer"
+        >
           <img
             className="aspect-square h-full w-full object-cover"
             src={featured1}
             alt=""
           />
-          <div class="absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center bg-stone-100 opacity-0 duration-500 group-hover:h-full group-hover:opacity-100 dark:bg-slate-500">
-            <h1 class="text-lg text-stone-600 dark:text-slate-200 lg:text-xl 2xl:text-2xl">
+          <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
+            <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
               Brownearth Urbanica
             </h1>
             <Link
@@ -79,15 +112,15 @@ const Home = () => {
               Project Details
             </Link>
           </div>
-        </div>
+        </motion.div>
         <div className="group relative cursor-pointer">
           <img
             className=" aspect-square  h-full w-full object-cover  lg:h-[400px] 2xl:h-[600px] "
             src={featured2}
             alt=""
           />
-          <div class="absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center bg-stone-100 opacity-0 duration-500 group-hover:h-full group-hover:opacity-100 dark:bg-slate-500">
-            <h1 class="text-lg text-stone-600 dark:text-slate-200 lg:text-xl 2xl:text-2xl">
+          <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
+            <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
               Brownearth Urbanica
             </h1>
             <Link
@@ -105,8 +138,8 @@ const Home = () => {
             src={featured1}
             alt=""
           />
-          <div class="absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center bg-stone-100 opacity-0 duration-500 group-hover:h-full group-hover:opacity-100 dark:bg-slate-500">
-            <h1 class="text-lg text-stone-600 dark:text-slate-200 lg:text-xl 2xl:text-2xl">
+          <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
+            <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
               Brownearth Urbanica
             </h1>
             <Link
@@ -139,7 +172,7 @@ const Home = () => {
       {/* Contact section  */}
 
       {/* <ContactForm /> */}
-    </div>
+    </motion.div>
   );
 };
 
