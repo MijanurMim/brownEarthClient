@@ -5,9 +5,12 @@ import aboutCover3 from "../../resources/project/3.jpg";
 import aboutCover from "../../resources/slider/1.jpg";
 // import {} from "framer-motion/dist/framer-motion.dev";
 import { useInView } from "react-intersection-observer";
+import Navbar from "../../components/navbar/Navbar";
 
 const About = () => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
   const animation = useAnimation();
 
   useEffect(() => {
@@ -40,13 +43,16 @@ const About = () => {
           src={aboutCover}
           alt="..."
         />
-        <div className=" absolute top-36 left-0 flex h-0 w-full flex-col items-center justify-center bg-indigo-700 duration-500  lg:top-60 ">
-          <h1 className="text-3xl text-white lg:text-6xl">About Us</h1>
+        {/* <div className=" lef-0  absolute top-80 mr-10 hidden h-0 w-full flex-col  items-start  justify-center bg-indigo-700 duration-500 md:flex  lg:mx-36 ">
+          <h1 className="text-3xl text-white ">ABOUT US</h1>
+        </div> */}
+        <div className="hero-text	sticky  w-full     shadow-sm ">
+          <Navbar />
         </div>
       </div>
 
       {/* Our Mission section  */}
-      <div className="m-6  lg:m-20 2xl:m-36">
+      <div className="m-6  lg:m-20 2xl:mx-36">
         <div className="my-6 flex flex-col">
           <span className="text-4xl text-stone-600 dark:text-slate-200">
             Total Quality
@@ -58,22 +64,22 @@ const About = () => {
 
         <div className="grid grid-cols-1 gap-6 font-light  dark:text-slate-200 lg:grid-cols-3">
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-            provident. Blanditiis rerum veritatis, ipsam eveniet magni
-            recusandae eum, expedita a rem fugiat facere commodi aperiam.
-            Maiores, commodi illum. Quibusdam, ut?
+            Brownearth Developments Ltd.an energetic and contemporary future in
+            property services. We like to think different and be different, but
+            we combine that with our traditional and familiar practices of
+            providing no nonsense, down to earth advice and service.
           </div>
           <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore,
-            nobis fuga. Animi esse quisquam, aperiam quo totam excepturi! Hic
-            officia animi tempora quas explicabo suscipit nemo saepe, cum quae
-            provident?
+            We offer an advanced and innovative approach towards real estate and
+            how to market, lease and sell property using new and progressive
+            marketing platforms and methods, particularly within the
+            ever-expanding digital era of marketing and all that it has to
+            offer.
           </div>
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            dolore maiores, sapiente omnis minima deleniti repellat impedit
-            culpa temporibus, eius sint sequi voluptatum minus laboriosam
-            debitis autem reprehenderit quasi fuga.
+            Brownearth Developments Ltd. we love talking about real estate and
+            connecting with people from all walks of life. We would invite
+            anyone to drop in, speak to our team and see what we are all about!
           </div>
         </div>
       </div>
@@ -103,22 +109,22 @@ const About = () => {
           className="grid grid-cols-1 gap-6 font-light  dark:text-slate-200 lg:grid-cols-3"
         >
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-            provident. Blanditiis rerum veritatis, ipsam eveniet magni
-            recusandae eum, expedita a rem fugiat facere commodi aperiam.
-            Maiores, commodi illum. Quibusdam, ut?
+            Brownearth Developments Ltd.an energetic and contemporary future in
+            property services. We like to think different and be different, but
+            we combine that with our traditional and familiar practices of
+            providing no nonsense, down to earth advice and service.
           </div>
           <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore,
-            nobis fuga. Animi esse quisquam, aperiam quo totam excepturi! Hic
-            officia animi tempora quas explicabo suscipit nemo saepe, cum quae
-            provident?
+            We offer an advanced and innovative approach towards real estate and
+            how to market, lease and sell property using new and progressive
+            marketing platforms and methods, particularly within the
+            ever-expanding digital era of marketing and all that it has to
+            offer.
           </div>
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            dolore maiores, sapiente omnis minima deleniti repellat impedit
-            culpa temporibus, eius sint sequi voluptatum minus laboriosam
-            debitis autem reprehenderit quasi fuga.
+            Brownearth Developments Ltd. we love talking about real estate and
+            connecting with people from all walks of life. We would invite
+            anyone to drop in, speak to our team and see what we are all about!
           </div>
         </motion.div>
       </div>
@@ -137,13 +143,11 @@ const About = () => {
             Our Clients
           </span>
           <span className="text-md dark:text-slate-200">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-            pariatur porro tempore alias atque magni nisi est excepturi,
-            praesentium hic sunt veritatis eius accusamus amet cumque explicabo
-            dolorem debitis! Placeat. Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. A quaerat eveniet omnis doloribus labore expedita,
-            perferendis itaque nam culpa quo voluptates veniam deleniti error
-            repellat, atque iusto maxime soluta? Libero.+
+            Our corporate clients have set high standards for themselves and
+            expect us to continue to deliver unmatched quality. On the other
+            hand our residential clientele are equally discerning, preserving
+            their privacy and delivering value is of the utmost importance to
+            us.
           </span>
         </div>
       </div>

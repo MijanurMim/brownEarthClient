@@ -1,168 +1,57 @@
-import React, { useState } from "react";
-import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
+import React from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../../resources/logo-transparent.png";
-
-const Navbar = () => {
-  let [open, setOpen] = useState(false);
-  // const [theme, setTheme] = useState("light");
-
-  //  *** for browser preference ***
-  // const [theme, setTheme] = useState(null);
-  // useEffect(() => {
-  //   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  //     setTheme("dark");
-  //   } else {
-  //     setTheme("light");
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   if (theme === "dark") {
-  //     document.documentElement.classList.add("dark");
-  //   } else {
-  //     document.documentElement.classList.remove("dark");
-  //   }
-  // }, [theme]);
-
-  // const handleThemeSwitch = () => {
-  //   setTheme(theme === "dark" ? "light" : "dark");
-  // };
+const FooterBlack = () => {
   return (
-    <div className=" lg:backdrop-blur-sm  ">
-      <div className="mr-10 items-end  justify-between py-6    dark:bg-slate-600 md:flex  lg:mx-36   ">
-        {/* Navbar title and logo  */}
-        <div className="ml-10 flex cursor-pointer  items-start justify-start  lg:ml-0   ">
-          <span className="  ">
-            <img src={logo} alt="" className=" w-24 object-cover  md:w-32" />
-          </span>
-        </div>
-
-        {/* Navbar Icon  */}
-        <div
-          onClick={() => setOpen(!open)}
-          className="absolute right-10 top-6 mt-4  cursor-pointer text-3xl transition-all dark:text-slate-200 md:hidden "
-        >
-          {/* <ion-icon name={open ? "close" : "menu"}></ion-icon> */}
-          {open ? <IoCloseSharp /> : <IoMenuSharp />}
-        </div>
-
-        <div className=" ">
-          {/* Navbar Items  */}
-          <ul
-            className={`lg-px-5 absolute  z-[-1] w-full  px-10 pb-12  transition-all  duration-500 ease-in  md:static   md:z-auto md:flex md:items-center md:space-x-1 md:pb-0 lg:space-x-8 
-        ${open ? "top-20 opacity-100" : "top-[-800px]"} md:opacity-100  `}
+    <div className=" bg-black  ">
+      {/* main footer section  */}
+      <div className="m-10 grid grid-cols-1 gap-4  pt-10 text-white md:gap-6  lg:m-36  xl:grid-cols-4 ">
+        <div className="flex flex-col gap-4">
+          <div className="text-2xl ">About Brownearth </div>
+          <div className="text-xs text-gray-400 lg:text-sm">
+            Brownearth Developments Ltd.an energetic and contemporary future in
+            property services.
+          </div>
+          <div className="text-xs text-gray-400 lg:text-sm">
+            We like to think different and be different, but we combine that
+            with our traditional and familiar practices of providing no
+            nonsense, down to earth advice and service.
+          </div>
+          <Link
+            to="/about"
+            className=" underline underline-offset-8 duration-300  hover:cursor-pointer hover:text-gray-400"
           >
-            <li>
-              <Link to="/" className="nav-hover-effect " aria-current="page">
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" className="nav-hover-effect ">
-                PROJECTS
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="nav-hover-effect ">
-                ABOUT US
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="nav-hover-effect ">
-                QUERY
-              </Link>
-            </li>
-            <li>
-              <Link to="/career" className="nav-hover-effect ">
-                CAREER
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="nav-hover-effect ">
-                CONTACT
-              </Link>
-            </li>
-
-            {/* Dropdown  */}
-            {/* <li>
-              <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
-                className="text-white-700 nav-hover-effect flex w-full items-center justify-start border-b py-2 pr-4 pl-3 font-medium md:w-auto  md:border-0 md:p-0  md:hover:bg-transparent"
-              >
-                <span className="flex justify-start">
-                  Our Services
-                  <span className="">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
-                  </span>
-                </span>
-              </button>
-              {/* <!-- Dropdown menu --> */}
-            <div
-              id="dropdownNavbar"
-              className="z-10 hidden w-44 list-none justify-start divide-y divide-gray-100 rounded bg-white text-base shadow "
-            >
-              <ul className="">
-                <li>
-                  <Link to={`/wedding`} className="nav-sub-items">
-                    Wedding Event
-                  </Link>
-                </li>
-                <li>
-                  <Link to={`/birthday`} className="nav-sub-items">
-                    Birthday Event
-                  </Link>
-                </li>
-                <li>
-                  <Link to={`/sports`} className="nav-sub-items">
-                    Sports Event
-                  </Link>
-                </li>
-                <li>
-                  <Link to={`/virtual-conference`} className="nav-sub-items">
-                    Virtual Conference
-                  </Link>
-                </li>
-                <li>
-                  <Link to={`/concert`} className="nav-sub-items">
-                    Concert
-                  </Link>
-                </li>
-                <li>
-                  <Link to={`/fashion-show`} className="nav-sub-items">
-                    Fashion Show
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            {/* </li> */}
-
-            {/* SERVICES */}
-            {/* <li>
-              <Link to="/contact" classNameName="nav-hover-effect">
-                SERVICES
-              </Link>
-            </li> */}
-
-            {/* <li>
-                <Link to="/contact" className="nav-hover-effect">
-                  Contact Us
-                </Link>
-              </li> */}
-            {/* {role === "admin" && (
-                <li>
-                  <Link to="/admin/projects" className="nav-hover-effect">
-                    Dashboard
-                  </Link>
-                </li>
-              )} */}
-          </ul>
+            KNOW MORE
+          </Link>
         </div>
+        <div></div>
+        <div></div>
 
+        <div className="flex flex-col  gap-4">
+          <div className="text-2xl ">Contact Us </div>
+          <div className="text-xs text-gray-400 lg:text-sm">
+            <div className="flex flex-col gap-6">
+              <div className="">Email: brownearthdev.ltd@gmail.com </div>
+              <div>Phone: 01717196696</div>
+            </div>
+          </div>
+          <div className="text-xs text-gray-400 lg:text-sm">
+            Plot-2475, Block -I (Extension) Bashundhara, Dhaka-1229.
+          </div>
+          <Link
+            to="/contact"
+            className=" underline underline-offset-8 duration-300  hover:cursor-pointer hover:text-gray-400"
+          >
+            GET DIRECTIONS
+          </Link>
+        </div>
+      </div>
+
+      {/* Bottom Footer section
+       */}
+      <div className="mt-10 bg-black pb-10  text-xs font-light text-white  lg:text-center">
         {/* SOCIAL MEDIA ICONS  */}
-        <div className="mt-6 hidden cursor-pointer justify-center gap-1  text-xl lg:ml-0 lg:mr-0 lg:text-2xl xl:flex    ">
+        <div className=" ml-10 flex cursor-pointer gap-1  text-xl lg:ml-0 lg:mr-0 lg:justify-center    lg:text-2xl">
           <div className="mb-2 flex  gap-3">
             <a
               href="https://www.facebook.com/profile.php?id=100089619553393&sk=about"
@@ -205,7 +94,7 @@ const Navbar = () => {
             </a>
             <a
               href="#!"
-              className="topbar-item-hover hover:text-stone-600 dark:hover:text-slate-400 "
+              className="topbar-item-hover hover:text-white dark:hover:text-slate-400 "
             >
               <svg
                 aria-hidden="true"
@@ -226,7 +115,7 @@ const Navbar = () => {
             <a
               href="https://instagram.com/eventplanning10?igshid=ZDdkNTZiNTM="
               target="_blank"
-              className=" topbar-item-hover hover:text-stone-800 dark:hover:text-slate-400"
+              className=" topbar-item-hover hover:text-white dark:hover:text-slate-400"
               rel="noreferrer"
             >
               <svg
@@ -247,7 +136,7 @@ const Navbar = () => {
             </a>
             <a
               href="#!"
-              className="topbar-item-hover hover:text-stone-800 dark:hover:text-slate-400"
+              className="topbar-item-hover hover:text-white  dark:hover:text-slate-400"
             >
               <svg
                 aria-hidden="true"
@@ -267,7 +156,7 @@ const Navbar = () => {
             </a>
             <a
               href="#!"
-              className="topbar-item-hover hover:text-stone-800 dark:hover:text-slate-400"
+              className="topbar-item-hover hover:text-white dark:hover:text-slate-400"
             >
               <svg
                 aria-hidden="true"
@@ -286,36 +175,13 @@ const Navbar = () => {
               </svg>
             </a>
           </div>
-          {/* <button
-            className="   duration-200 hover:scale-105 dark:bg-slate-500 dark:text-white"
-            onClick={handleThemeSwitch}
-          >
-            {theme === "dark" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
-          </button> */}
         </div>
-
-        {/* <div className=" flex cursor-pointer items-center  justify-center text-gray-300">
-            {role ? (
-              <button onClick={handleLogout} className="nav-hover-effect">
-                Logout
-                <span className="text-green-600">
-                  <ion-icon name="log-out-outline"></ion-icon>
-                </span>
-              </button>
-            ) : (
-              <Link to="/login" className="nav-hover-effect">
-                Login
-                <span className="text-green-600">
-                  <ion-icon name="log-in-outline"></ion-icon>
-                </span>
-              </Link>
-            )}
-          </div> */}
+        <div className="ml-10 text-[11px] md:text-xs lg:ml-0">
+          © 2023 Brownearth Developments Ltd. All rights reserved
+        </div>
       </div>
-
-      {/* Slider  */}
     </div>
   );
 };
 
-export default Navbar;
+export default FooterBlack;

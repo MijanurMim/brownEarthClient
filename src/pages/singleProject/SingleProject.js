@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import { motion, useAnimation } from "framer-motion";
 import { AiOutlinePoweroff } from "react-icons/ai";
 import { BiCctv } from "react-icons/bi";
 import { BsFillCarFrontFill } from "react-icons/bs";
@@ -7,23 +8,26 @@ import { RiHomeGearFill } from "react-icons/ri";
 import { RxRocket } from "react-icons/rx";
 import { SiAdguard } from "react-icons/si";
 import singleProjectFloorPlan from "../../resources/floorplan.jpg";
-import singleProjectCover from "../../resources/singleProjectCover.jpg";
+import {
+  default as aboutCover,
+  default as projectImage1,
+} from "../../resources/projectUrbanica/1.jpg";
+import projectImage2 from "../../resources/projectUrbanica/2.jpg";
+import projectImage6 from "../../resources/projectUrbanica/3.jpg";
+import projectImage8 from "../../resources/projectUrbanica/4.jpg";
+import projectImage7 from "../../resources/projectUrbanica/5.jpg";
+import projectImage4 from "../../resources/projectUrbanica/6.jpg";
+import projectImage5 from "../../resources/projectUrbanica/7.jpg";
+import projectImage3 from "../../resources/projectUrbanica/8.jpg";
 import singleProjectPortrait from "../../resources/urbanicaPotrait.jpg";
-
-import { motion, useAnimation } from "framer-motion";
-import projectImage1 from "../../resources/project/1.jpg";
-import projectImage4 from "../../resources/project/10.jpg";
-import projectImage6 from "../../resources/project/11.jpg";
-import projectImage8 from "../../resources/project/12.jpg";
-import projectImage7 from "../../resources/project/13.jpg";
-import projectImage2 from "../../resources/project/2.jpg";
-import projectImage3 from "../../resources/project/3.jpg";
-import projectImage5 from "../../resources/project/4.jpg";
 // import {} from "framer-motion/dist/framer-motion.dev";
 import { useInView } from "react-intersection-observer";
+import Navbar from "../../components/navbar/Navbar";
 
 const SingleProject = () => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
   const animation = useAnimation();
 
   useEffect(() => {
@@ -50,7 +54,7 @@ const SingleProject = () => {
       className="dark:bg-slate-600"
     >
       {/* top section  */}
-      <div className="mx-10 grid grid-cols-1      gap-6  md:grid-cols-2  lg:mx-36">
+      {/* <div className="mx-10 grid grid-cols-1      gap-6  md:grid-cols-2  lg:mx-36">
         <div className=" flex  flex-col justify-center text-left  ">
           <p className="text-2xl uppercase text-stone-600 dark:text-slate-200 lg:text-4xl">
             Brownearth Urbanica
@@ -65,10 +69,25 @@ const SingleProject = () => {
         <div>
           <img src={singleProjectCover} alt="" className="object-cover" />
         </div>
+      </div> */}
+      <div className="group relative ">
+        <img
+          className="h-64 w-full object-cover grayscale lg:h-[550px]"
+          src={aboutCover}
+          alt="..."
+        />
+        {/* <div className=" absolute top-80 ml-36 flex h-0 w-full flex-col items-start justify-center bg-indigo-700 duration-500  lg:top-60 ">
+          <h1 className="text-3xl uppercase text-white ">
+            Brownearth Urbanica
+          </h1>
+        </div> */}
+        <div className="hero-text	sticky  w-full     shadow-sm ">
+          <Navbar />
+        </div>
       </div>
 
       {/* Project Details section  */}
-      <div className=" m-10 mt-20 grid grid-cols-1 gap-1 md:grid-cols-2   lg:mx-36 lg:gap-10 ">
+      <div className=" m-10 grid  grid-cols-1 gap-1 md:grid-cols-2 lg:m-0   lg:mx-36 lg:gap-10 ">
         <div className=" flex  flex-col justify-center text-left   ">
           <p className="text-3xl uppercase text-stone-600 dark:text-slate-200  lg:text-4xl ">
             Project Details
@@ -82,10 +101,10 @@ const SingleProject = () => {
             Status: Upcoming{" "}
           </p>
           <p className=" text-lg font-medium text-stone-600	 dark:text-slate-200">
-            Launch:{" "}
+            Launch: 2023
           </p>
-          <p className="text-lg text-stone-600 dark:text-slate-200">
-            Completion:{" "}
+          <p className="text-lg font-medium text-stone-600 dark:text-slate-200">
+            Completion: 2026
           </p>
           <br />
 
@@ -98,10 +117,10 @@ const SingleProject = () => {
           <br />
 
           <p className=" text-lg font-medium	 text-stone-600 dark:text-slate-200">
-            Total <div className="font-bold">8</div> Units
+            Total <span className="font-bold">8</span> Units
           </p>
           <p className="text-lg text-stone-600 dark:text-slate-200">
-            <div className="font-bold">4,500 sft</div> (Approx.)
+            <span className="font-bold">2,000 sft</span> (Approx.)
           </p>
         </div>
         <div className="mt-10 flex justify-end">

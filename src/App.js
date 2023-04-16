@@ -1,8 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import AnimatedRoutes from "./components/animatedRoutes/AnimatedRoutes";
-import Footer from "./components/footer/Footer";
+import FooterBlack from "./components/footer/FooterBlack";
 import GoToTop from "./components/goToTop/GoToTop";
-import Navbar from "./components/navbar/Navbar";
 import ScrollToTop from "./components/scrolToTop/ScrollToTop";
 function App() {
   return (
@@ -10,12 +9,12 @@ function App() {
       {/* common  */}
 
       <ScrollToTop />
-      <Navbar />
+      {/* <Navbar /> */}
       <AnimatedRoutes />
       {/* Common */}
 
       <GoToTop />
-      <Footer />
+      <FooterBlack />
     </Router>
   );
 }

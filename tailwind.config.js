@@ -5,7 +5,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+      sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
     },
     debugScreens: {
       position: ["bottom", "left"],
@@ -14,7 +14,15 @@ module.exports = {
         color: "black",
       },
     },
-    extend: {},
+    extend: {
+      aspectRatio: {
+        "21/9": "21 / 9",
+      },
+      backgroundImage: {
+        homeParalax:
+          'url("https://www.credencehousingltd.com/admin/uploads/page/parallax-image/1920x930/1665920358BLLwU_m.jpg")',
+      },
+    },
   },
   plugins: [require("tailwindcss-debug-screens")],
 };
