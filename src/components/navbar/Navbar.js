@@ -8,8 +8,8 @@ const Navbar = () => {
   let [open, setOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 bg-slate-50  ">
-      <div className="mr-10 items-end  justify-between py-6     md:flex  lg:mx-20   ">
+    <div className="  ">
+      <div className=" mr-10  items-end justify-between py-6     md:flex  lg:mx-20   ">
         {/* Navbar title and logo  */}
         <div className="ml-10 flex cursor-pointer  items-start justify-start  lg:ml-0   ">
           <span className="  ">

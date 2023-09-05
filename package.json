@@ -17,6 +17,7 @@
     "react-player": "^2.12.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
+    "sal.js": "^0.8.5",
     "swiper": "^8.1.1",
     "web-vitals": "^2.1.4"
   },

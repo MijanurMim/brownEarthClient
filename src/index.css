@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "sal.js/dist/sal.css";
+
 body {
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 
 .nav-hover-effect {
@@ -22,10 +24,11 @@ body {
 .project-sort-list {
   @apply block bg-slate-600 py-2 px-4  text-xs text-gray-200 transition-all duration-150 hover:scale-105 hover:text-stone-600  dark:bg-slate-600     dark:text-gray-600 lg:text-sm;
 }
+
 .topbar-item-hover {
-  @apply text-white duration-500  hover:scale-150 dark:text-slate-200;
+  @apply text-primary  duration-500 hover:scale-150 hover:text-secondary;
 }
 
 .footer-item-hover {
-  @apply mr-6 text-stone-800 decoration-stone-600 duration-200  hover:text-stone-500 hover:underline dark:text-slate-200  dark:decoration-slate-200 dark:hover:text-slate-300;
+  @apply mr-6 text-stone-800 decoration-stone-600 duration-200  hover:text-secondary hover:underline;
 }
