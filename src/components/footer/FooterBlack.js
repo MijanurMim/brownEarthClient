@@ -32,11 +32,12 @@ const FooterBlack = () => {
           <div className="text-xs text-gray-400 lg:text-sm">
             <div className="flex flex-col gap-6">
               <div className="">Email: brownearthdev.ltd@gmail.com </div>
-              <div>Phone: 01717196696</div>
+              <div>Phone:+88 01717196696</div>
             </div>
           </div>
           <div className="text-xs text-gray-400 lg:text-sm">
-            Plot-2475, Block -I (Extension) Bashundhara, Dhaka-1229.
+            5/1, Block E, Level - 05, E-1 <br />
+            Lalmatia, Dhaka, Bangladesh
           </div>
           <Link
             to="/contact"

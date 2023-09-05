@@ -6,7 +6,10 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+      oswald: ["Oswald", ...defaultTheme.fontFamily.sans],
+      poiret: ["Poiret One", ...defaultTheme.fontFamily.sans],
     },
+
     debugScreens: {
       position: ["bottom", "left"],
       style: {
@@ -15,6 +18,10 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        primary: "#231709",
+        secondary: "#5e2c04",
+      },
       aspectRatio: {
         "21/9": "21 / 9",
       },
@@ -24,5 +31,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-debug-screens")],
+  plugins: [require("flowbite/plugin")],
 };

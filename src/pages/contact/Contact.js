@@ -1,7 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import Navbar from "../../components/navbar/Navbar";
+
 import contactCover from "../../resources/slider/3.jpg";
 import ContactForm from "./ContactForm";
 const Contact = () => {
@@ -19,12 +19,6 @@ const Contact = () => {
           src={contactCover}
           alt="..."
         />
-        {/* <div className=" absolute top-36 left-0 flex h-0 w-full flex-col items-center justify-center bg-indigo-700 duration-500  lg:top-60 ">
-          <h1 className="text-3xl text-white lg:text-6xl">Contact Us</h1>
-        </div> */}
-        <div className="hero-text	sticky  w-full     shadow-sm ">
-          <Navbar />
-        </div>
       </div>
       <ContactForm />
     </motion.div>

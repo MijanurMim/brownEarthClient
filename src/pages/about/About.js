@@ -5,7 +5,6 @@ import aboutCover3 from "../../resources/project/3.jpg";
 import aboutCover from "../../resources/slider/1.jpg";
 // import {} from "framer-motion/dist/framer-motion.dev";
 import { useInView } from "react-intersection-observer";
-import Navbar from "../../components/navbar/Navbar";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -43,12 +42,6 @@ const About = () => {
           src={aboutCover}
           alt="..."
         />
-        {/* <div className=" lef-0  absolute top-80 mr-10 hidden h-0 w-full flex-col  items-start  justify-center bg-indigo-700 duration-500 md:flex  lg:mx-36 ">
-          <h1 className="text-3xl text-white ">ABOUT US</h1>
-        </div> */}
-        <div className="hero-text	sticky  w-full     shadow-sm ">
-          <Navbar />
-        </div>
       </div>
 
       {/* Our Mission section  */}

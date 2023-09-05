@@ -2,8 +2,8 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Navbar from "../../components/navbar/Navbar";
-import contactCover from "../../resources/slider/3.jpg";
+
+import contactCover from "../../resources/projectUrbanica/7.jpg";
 const Career = () => {
   return (
     <motion.div
@@ -23,9 +23,6 @@ const Career = () => {
           <h1 className="text-3xl text-white lg:text-6xl">Career</h1>
           <h1 className="text-xl text-white ">Join the Brownearth Family</h1>
         </div> */}
-        <div className="hero-text	sticky  w-full     shadow-sm ">
-          <Navbar />
-        </div>
       </div>
 
       {/* Our Mission section  */}

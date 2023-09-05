@@ -17,28 +17,6 @@ const ContactForm = () => {
               marginwidth="0"
               scrolling="yes"
             ></iframe>
-            {/* <div className="relative flex flex-wrap rounded bg-white py-6 shadow-md dark:bg-slate-600">
-              <div className="px-6 lg:w-1/2">
-                <h2 className="title-font text-xs font-semibold tracking-widest text-gray-900 dark:text-slate-200">
-                  LOCATION
-                </h2>
-                <p className="mt-1">
-                  Plot-2475, Block -I (Extension) Bashundhara, Dhaka-1229.
-                </p>
-              </div>
-              <div className="mt-4 px-6 lg:mt-0 lg:w-1/2">
-                <h2 className="title-font text-xs font-semibold tracking-widest text-gray-900 dark:text-slate-200">
-                  EMAIL
-                </h2>
-                <a className="leading-relaxed text-indigo-400">
-                  brownearthltd@gmail.com
-                </a>
-                <h2 className="title-font mt-4 text-xs font-semibold tracking-widest text-gray-900 dark:text-slate-200">
-                  PHONE
-                </h2>
-                <p className="leading-relaxed">01844-520202</p>
-              </div>
-            </div> */}
           </div>
           <div className="mt-8 flex w-full flex-col  dark:bg-slate-600  md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3">
             <h2 className="title-font mb-1 text-3xl font-medium text-stone-700 dark:text-slate-200">

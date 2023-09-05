@@ -38,70 +38,45 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
+      {/* Slider  */}
       <Slider />
 
-      {/* landowner section  */}
-      {/* <div className="m-10 grid grid-cols-1 gap-4 md:grid-cols-4  lg:my-10      lg:mx-36  lg:gap-6  ">
-        <div></div>
-        <Link
-          to="/contact"
-          className="flex cursor-pointer flex-col items-center justify-center bg-stone-100 p-10   text-stone-600 shadow-lg duration-300 hover:scale-105 dark:bg-slate-500 dark:text-slate-200 2xl:p-20"
-        >
-          <div className="text-4xl xl:text-6xl">
-            <BiLandscape />
-          </div>
-          <div className="xl:text-xl">LANDOWNER</div>
-          <div className="text-sm">
-            Realize the full potential of your Land.
-          </div>
-        </Link>
-
-        <Link
-          to="/contact"
-          className="flex cursor-pointer flex-col items-center justify-center bg-stone-100 p-6  text-stone-600 shadow-lg duration-300 hover:scale-105 dark:bg-slate-500 dark:text-slate-200"
-        >
-          <div className="text-6xl">
-            <TbHomeDollar />
-          </div>
-          <div className="text-xl">BUYER</div>
-          <div className="text-sm">Let us show you the possibilities.</div>
-        </Link>
-
-        <Link
-          to="contact"
-          className="flex cursor-pointer flex-col items-center justify-center bg-stone-100 p-6  text-stone-600 shadow-lg duration-300 hover:scale-105 dark:bg-slate-500 dark:text-slate-200"
-        >
-          <div className="text-6xl">
-            {" "}
-            <TbBrandGoogleBigQuery />
-          </div>
-          <div className="text-xl">OTHERS</div>
-          <div className="text-sm"> Get in touch with us. </div>
-        </Link>
-      </div> */}
-
-      {/* Home Overview Section  */}
-      <div className="m-10 mb-20 flex flex-col items-center justify-center gap-8 text-center lg:mx-36">
-        <div className="text-xl font-medium text-stone-600 lg:text-3xl">
-          Deluxe Abodes Redefining Sophistication
-        </div>
-        <div className="text-sm">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          repudiandae fugiat quam ipsa natus distinctio inventore optio tempora?
-          Doloremque odio obcaecati voluptatibus rerum. Doloremque consequuntur
-          nisi incidunt? Delectus, earum reiciendis.
-        </div>
+      {/* Home About Section  */}
+      <div className="mt-16 font-poiret lg:mx-20">
         <div>
-          <Link
-            to="/about"
-            className="cursor-pointer border border-black px-20 py-3 duration-500 hover:bg-black hover:text-white"
-          >
-            EXPLORE
-          </Link>
+          <h1 className="text-4xl uppercase">
+            Building a legacy of excellence
+          </h1>
+        </div>
+        <div className="mt-16 grid grid-cols-4">
+          <div></div>
+          <div className="col-span-3">
+            <p className="text-justify text-xl">
+              BrownEarth Developments Ltd. , your premier partner in innovative
+              building development solutions. With a steadfast commitment to
+              excellence, creativity, and sustainability, we are at the
+              forefront of shaping skylines and communities through our
+              exceptional projects.At BrownEarth Developments Ltd. we believe
+              that buildings are more than just structures; they are living
+              spaces that should inspire, elevate, and transform lives. With a
+              team of passionate architects, engineers, designers, and
+              construction experts, we embark on each project as a unique
+              journey, blending cutting-edge technology with timeless design
+              principles. BrownEarth Developments Ltd. , your premier partner in
+              innovative building development solutions. With a steadfast
+              commitment to excellence, creativity, and sustainability, we are
+              at the forefront of shaping skylines and communities through our
+              exceptional projects.At BrownEarth Developments Ltd. we believe
+              that buildings are more than just structures; they are living
+              spaces that should inspire, elevate, and transform lives. With a
+              team of passionate architects, engineers, designers, and
+              construction experts, we embark on each project as a unique
+              journey, blending cutting-edge technology with timeless design
+              principles.
+            </p>
+          </div>
         </div>
       </div>
-
-      <div className="flex min-h-[500px] items-center  justify-center bg-homeParalax bg-cover  bg-fixed bg-center bg-no-repeat xl:min-h-[700px]  "></div>
 
       {/* Features Work Section  */}
       <div

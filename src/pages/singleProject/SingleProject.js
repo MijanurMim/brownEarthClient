@@ -22,7 +22,6 @@ import projectImage3 from "../../resources/projectUrbanica/8.jpg";
 import singleProjectPortrait from "../../resources/urbanicaPotrait.jpg";
 // import {} from "framer-motion/dist/framer-motion.dev";
 import { useInView } from "react-intersection-observer";
-import Navbar from "../../components/navbar/Navbar";
 
 const SingleProject = () => {
   const { ref, inView } = useInView({
@@ -53,82 +52,65 @@ const SingleProject = () => {
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
       className="dark:bg-slate-600"
     >
-      {/* top section  */}
-      {/* <div className="mx-10 grid grid-cols-1      gap-6  md:grid-cols-2  lg:mx-36">
-        <div className=" flex  flex-col justify-center text-left  ">
-          <p className="text-2xl uppercase text-stone-600 dark:text-slate-200 lg:text-4xl">
-            Brownearth Urbanica
-          </p>
-          <p className="text-lg text-stone-700 dark:text-slate-200">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet non
-            accusamus voluptatum, aperiam, debitis blanditiis sit culpa maiores
-            nam iste nobis tempora nihil tempore vel asperiores dolore ipsam
-            nesciunt earum.
-          </p>
-        </div>
-        <div>
-          <img src={singleProjectCover} alt="" className="object-cover" />
-        </div>
-      </div> */}
       <div className="group relative ">
         <img
           className="h-64 w-full object-cover grayscale lg:h-[550px]"
           src={aboutCover}
           alt="..."
         />
-        {/* <div className=" absolute top-80 ml-36 flex h-0 w-full flex-col items-start justify-center bg-indigo-700 duration-500  lg:top-60 ">
-          <h1 className="text-3xl uppercase text-white ">
-            Brownearth Urbanica
-          </h1>
-        </div> */}
-        <div className="hero-text	sticky  w-full     shadow-sm ">
-          <Navbar />
-        </div>
       </div>
 
       {/* Project Details section  */}
-      <div className=" m-10 grid  grid-cols-1 gap-1 md:grid-cols-2 lg:m-0   lg:mx-36 lg:gap-10 ">
-        <div className=" flex  flex-col justify-center text-left   ">
-          <p className="text-3xl uppercase text-stone-600 dark:text-slate-200  lg:text-4xl ">
-            Project Details
-          </p>
-          <p className="text-lg font-light text-stone-600 dark:text-slate-200 ">
-            Brownearth Urbanica
-          </p>
-          <br />
-
-          <p className=" text-lg font-medium text-stone-600	 dark:text-slate-200">
-            Status: Upcoming{" "}
-          </p>
-          <p className=" text-lg font-medium text-stone-600	 dark:text-slate-200">
-            Launch: 2023
-          </p>
-          <p className="text-lg font-medium text-stone-600 dark:text-slate-200">
-            Completion: 2026
-          </p>
-          <br />
-
-          <p className="text-lg font-light text-stone-700 dark:text-slate-200">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet non
-            accusamus voluptatum, aperiam, debitis blanditiis sit culpa maiores
-            nam iste nobis tempora nihil tempore vel asperiores dolore ipsam
-            nesciunt earum.
-          </p>
-          <br />
-
-          <p className=" text-lg font-medium	 text-stone-600 dark:text-slate-200">
-            Total <span className="font-bold">8</span> Units
-          </p>
-          <p className="text-lg text-stone-600 dark:text-slate-200">
-            <span className="font-bold">2,000 sft</span> (Approx.)
-          </p>
+      <div className="mx-10 flex flex-col lg:mx-36">
+        <div className=" flex  text-xl uppercase    tracking-wider text-stone-600 dark:text-slate-200 md:items-center   lg:mb-2 lg:text-2xl	 ">
+          Brownearth Urbanica
         </div>
-        <div className="mt-10 flex justify-end">
+        <div className="text-sm ">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+          accusamus amet vero enim explicabo rerum sed cupiditate ullam. Illo
+          necessitatibus unde modi animi eaque magnam natus. Voluptatibus
+          praesentium esse error? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Corporis sunt odio nihil totam optio quibusdam
+          dolore tempora nesciunt, unde at obcaecati commodi beatae perferendis
+          quisquam! Inventore iure quae quod repudiandae!
+        </div>
+      </div>
+
+      {/* Project Specification section  */}
+      <div className=" m-10 grid  grid-cols-1 gap-1 md:grid-cols-2 lg:m-0   lg:mx-36 lg:gap-10 ">
+        <div className="flex justify-end lg:mt-10">
           <img
-            className="h-full w-full lg:h-[85%]  lg:w-[90%]"
+            className="h-full w-full lg:h-[85%]  "
             src={singleProjectPortrait}
             alt=""
           />
+        </div>
+        <div className="lg:mt-10">
+          <div className="flex text-xl uppercase    tracking-wider text-stone-600 dark:text-slate-200 md:items-center   lg:mb-36 lg:text-2xl	 ">
+            SPECIFICATION
+          </div>
+          <div className="grid grid-cols-2  lg:grid-cols-3  ">
+            <ul className=" flex  flex-col justify-between  gap-10 font-medium ">
+              <li>Address : </li>
+              <li>Land Area :</li>
+              <li>Height :</li>
+              <li>Building Type :</li>
+              <li>Number Of Apartments :</li>
+              <li>Number Of Car Parkings :</li>
+              <li>Units Per Floor :</li>
+              <li>Size Of Each Apartment :</li>
+            </ul>
+            <ul className="flex flex-col justify-between  lg:col-span-2">
+              <li>BrownEarth Urbanica, RC4W+M2, Dhaka</li>
+              <li>12 katha</li>
+              <li>9 Storied (G+8)</li>
+              <li className="">Residential</li>
+              <li className="">24</li>
+              <li>23</li>
+              <li>03</li>
+              <li> 1503 sft (Approx.)</li>
+            </ul>
+          </div>
         </div>
       </div>
 

@@ -3,10 +3,12 @@ import AnimatedRoutes from "./components/animatedRoutes/AnimatedRoutes";
 import FooterBlack from "./components/footer/FooterBlack";
 import GoToTop from "./components/goToTop/GoToTop";
 import ScrollToTop from "./components/scrolToTop/ScrollToTop";
+import Navbar from "./components/navbar/Navbar";
 function App() {
   return (
     <Router>
       {/* common  */}
+      <Navbar />
 
       <ScrollToTop />
       {/* <Navbar /> */}
