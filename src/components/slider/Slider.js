@@ -6,6 +6,7 @@ import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import sliderImg2 from "../../resources/projectUrbanica/2.jpg";
 import sliderImg4 from "../../resources/projectUrbanica/3.jpg";
