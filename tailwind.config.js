@@ -24,6 +24,7 @@ module.exports = {
       },
       aspectRatio: {
         "21/9": "21 / 9",
+        "3/1": "3/1",
       },
       backgroundImage: {
         homeParalax:

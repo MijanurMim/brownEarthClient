@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import featured2 from "../../resources/projectUrbanica/2.jpg";
 import featured3 from "../../resources/projectUrbanica/4.jpg";
 import contactCover from "../../resources/projectUrbanica/8.jpg";
-import featured1 from "../../resources/urbanica2.jpg";
+import featured1 from "../../resources/humaira-bashir/humaira-1.jpg";
 
 const Projects = () => {
   const { ref, inView } = useInView({
@@ -47,7 +47,7 @@ const Projects = () => {
       </div>
 
       {/* filter section  */}
-      <div className="m-10  grid grid-cols-1 gap-2 lg:mx-36  lg:my-10      lg:grid-cols-3  lg:gap-6   ">
+      <div className="mx-10  grid grid-cols-1 gap-2 font-oswald  lg:mx-20 lg:my-10     lg:grid-cols-3  lg:gap-6   ">
         <div>
           {" "}
           <label
@@ -114,17 +114,21 @@ const Projects = () => {
       {/***  Features Work Section  ***/}
       <div
         ref={ref}
-        className="m-10  grid grid-cols-1 gap-2 lg:mx-36  lg:my-10      lg:grid-cols-3  lg:gap-6  "
+        className="mx-10 grid  grid-cols-3   gap-1 lg:mx-20  lg:my-10      "
       >
-        <motion.div
-          animate={animation}
-          className="group relative cursor-pointer"
-        >
-          <img
-            className="aspect-square h-full w-full object-cover"
-            src={featured2}
-            alt=""
-          />
+        <div className="flex flex-col items-start justify-center bg-stone-200 pl-10">
+          <h4 className="font-oswald text-xl uppercase">brownearth</h4>
+          <h1 className="font-poiret text-6xl uppercase text-secondary">
+            urbanica
+          </h1>
+          <h4 className="font-oswald text-xl ">
+            I-Extension, Plot - 2475 <br /> Bashundhara R/A , Dhaka
+          </h4>
+        </div>
+
+        {/* left thumb  */}
+        <div className="group relative col-span-2  cursor-pointer font-poiret">
+          <img className=" aspect-21/9 object-cover" src={featured2} alt="" />
           <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
             <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
               Brownearth Urbanica
@@ -137,19 +141,34 @@ const Projects = () => {
               Project Details
             </Link>
           </div>
-        </motion.div>
-        <div className="group relative cursor-pointer">
-          <img
-            className=" aspect-square  h-full w-full object-cover  lg:h-[400px] 2xl:h-[600px] "
-            src={featured1}
-            alt=""
-          />
+        </div>
+      </div>
+
+      <div
+        ref={ref}
+        className="mx-10 grid  grid-cols-3   gap-1 lg:mx-20  lg:my-10      "
+      >
+        <div className="flex flex-col items-start justify-center bg-stone-200 pl-10">
+          <h4 className="font-oswald text-xl uppercase">
+            BROWNEARTH HOMAYRA BASHIR
+          </h4>
+          <h1 className="font-poiret text-6xl uppercase text-secondary">
+            BENCHMARK
+          </h1>
+          <h4 className="font-oswald text-xl ">
+            Sector 16, Road 503 , <br /> Plot 001 Jalshiri Abashon
+          </h4>
+        </div>
+
+        {/* left thumb  */}
+        <div className="group relative col-span-2  cursor-pointer font-poiret">
+          <img className=" aspect-21/9 object-cover" src={featured1} alt="" />
           <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
             <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
               Brownearth Urbanica
             </h1>
             <Link
-              to="/projects"
+              to="/project"
               class="mt-5 rounded-full bg-white px-8 py-3 duration-300 hover:bg-stone-300 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700 "
               href="#"
             >
@@ -157,69 +176,23 @@ const Projects = () => {
             </Link>
           </div>
         </div>
-        <div className="group relative cursor-pointer">
-          <img
-            className="aspect-square h-full w-full object-cover"
-            src={featured3}
-            alt=""
-          />
-          <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
-            <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
-              Brownearth Urbanica
-            </h1>
-            <Link
-              to="/projects"
-              class="mt-5 rounded-full bg-white px-8 py-3 duration-300 hover:bg-stone-300 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700 "
-              href="#"
-            >
-              Project Details
-            </Link>
-          </div>
+      </div>
+
+      <div
+        ref={ref}
+        className="mx-10 grid  grid-cols-3   gap-1 lg:mx-20  lg:my-10      "
+      >
+        <div className="flex flex-col items-start justify-center bg-stone-200 pl-10">
+          <h4 className="font-oswald text-xl uppercase">brownearth</h4>
+          <h1 className="font-poiret text-6xl uppercase text-secondary">
+            courtside
+          </h1>
+          <h4 className="font-oswald text-xl ">Jalshiri Abashon, Sector 11</h4>
         </div>
-        <div className="group relative cursor-pointer">
-          <img
-            className="aspect-square h-full w-full object-cover"
-            src={featured3}
-            alt=""
-          />
-          <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
-            <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
-              Brownearth Urbanica
-            </h1>
-            <Link
-              to="/projects"
-              class="mt-5 rounded-full bg-white px-8 py-3 duration-300 hover:bg-stone-300 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700 "
-              href="#"
-            >
-              Project Details
-            </Link>
-          </div>
-        </div>
-        <div className="group relative cursor-pointer">
-          <img
-            className=" aspect-square  h-full w-full object-cover  lg:h-[400px] 2xl:h-[600px] "
-            src={featured1}
-            alt=""
-          />
-          <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
-            <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
-              Brownearth Urbanica
-            </h1>
-            <Link
-              to="/projects"
-              class="mt-5 rounded-full bg-white px-8 py-3 duration-300 hover:bg-stone-300 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700 "
-              href="#"
-            >
-              Project Details
-            </Link>
-          </div>
-        </div>
-        <div className="group relative cursor-pointer">
-          <img
-            className="aspect-square h-full w-full object-cover"
-            src={featured2}
-            alt=""
-          />
+
+        {/* left thumb  */}
+        <div className="group relative col-span-2  cursor-pointer font-poiret">
+          <img className=" aspect-21/9 object-cover" src={featured3} alt="" />
           <div class="bg-blur absolute top-0 left-0 flex h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500">
             <h1 class="text-lg uppercase tracking-wide text-slate-200 lg:text-xl 2xl:text-2xl">
               Brownearth Urbanica

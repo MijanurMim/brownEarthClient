@@ -39,13 +39,14 @@ const Navbar = () => {
             </li>
 
             <li>
-              <Link to="/about" className="nav-hover-effect ">
-                ABOUT US
-              </Link>
-            </li>
-            <li>
               <Link to="/projects" className="nav-hover-effect ">
                 PROJECTS
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/about" className="nav-hover-effect ">
+                ABOUT US
               </Link>
             </li>
 

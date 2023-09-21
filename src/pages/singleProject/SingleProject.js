@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import ImageGallery from "react-image-gallery";
+import ReactPlayer from "react-player";
 
 import "./SingleProject.css";
 
@@ -23,6 +25,89 @@ import projectImage3 from "../../resources/projectUrbanica/8.jpg";
 import singleProjectPortrait from "../../resources/urbanicaPotrait.jpg";
 // import {} from "framer-motion/dist/framer-motion.dev";
 import { useInView } from "react-intersection-observer";
+
+const images = [
+  {
+    original: projectImage2,
+    thumbnail: projectImage2,
+  },
+  {
+    original: projectImage6,
+    thumbnail: projectImage6,
+  },
+  {
+    original: projectImage8,
+    thumbnail: projectImage8,
+  },
+  {
+    original: projectImage7,
+    thumbnail: projectImage7,
+  },
+  {
+    original: projectImage4,
+    thumbnail: projectImage4,
+  },
+  {
+    original: projectImage5,
+    thumbnail: projectImage5,
+  },
+  {
+    original: projectImage3,
+    thumbnail: projectImage3,
+  },
+  {
+    original: projectImage2,
+    thumbnail: projectImage2,
+  },
+  {
+    original: projectImage6,
+    thumbnail: projectImage6,
+  },
+  {
+    original: projectImage8,
+    thumbnail: projectImage8,
+  },
+  {
+    original: projectImage7,
+    thumbnail: projectImage7,
+  },
+  {
+    original: projectImage4,
+    thumbnail: projectImage4,
+  },
+  {
+    original: projectImage5,
+    thumbnail: projectImage5,
+  },
+  {
+    original: projectImage3,
+    thumbnail: projectImage3,
+  },
+  {
+    original: projectImage5,
+    thumbnail: projectImage5,
+  },
+  {
+    original: projectImage3,
+    thumbnail: projectImage3,
+  },
+  {
+    original: projectImage5,
+    thumbnail: projectImage5,
+  },
+  {
+    original: projectImage3,
+    thumbnail: projectImage3,
+  },
+  {
+    original: projectImage5,
+    thumbnail: projectImage5,
+  },
+  {
+    original: projectImage3,
+    thumbnail: projectImage3,
+  },
+];
 
 const SingleProject = () => {
   // Swiper
@@ -65,7 +150,7 @@ const SingleProject = () => {
       </div>
 
       {/* Project Description  */}
-      <div className="my-10 grid grid-cols-1 text-primary lg:mx-20       xl:grid-cols-3">
+      <div className="mx-10 mt-10 grid grid-cols-1 text-primary       lg:mx-20 xl:grid-cols-3">
         {/* Left Section  */}
         <div className="d-flex justify-items-start ">
           <h4 className="font-oswald text-xl uppercase">brownearth</h4>
@@ -107,7 +192,7 @@ const SingleProject = () => {
       </div>
 
       {/* Project Highlights  */}
-      <div className="text-oswald mx-10  mb-6 grid    grid-cols-1  font-oswald  lg:mx-20 xl:grid-cols-3 ">
+      <div className="text-oswald mx-10  my-32 mb-6    grid grid-cols-1  font-oswald  lg:mx-20 xl:grid-cols-3 ">
         {/* Left section  */}
         <div className="flex flex-col items-start justify-center">
           <div>
@@ -190,7 +275,35 @@ const SingleProject = () => {
       </div>
 
       {/* Project Gallary  */}
-      <div></div>
+      <div className="mx-10 my-32 lg:mx-20  ">
+        <ImageGallery
+          items={images}
+          slideInterval={4000}
+          showNav={false}
+          showBullets={true}
+          autoPlay={true}
+          disableSwipe={true}
+          slideOnThumbnailOver={true}
+          showPlayButton={false}
+        />
+      </div>
+
+      {/* Project Video */}
+      <div className="mx-10 my-32 grid  grid-cols-3 items-center lg:mx-20">
+        <div className="">
+          <img src={singleProjectFloorPlan} alt="img" className="h-100" />
+        </div>
+
+        <div className="col-span-2 aspect-21/9    ">
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=lC6b85dQQCI"
+            width="100%"
+            height="100%"
+            controls={true}
+            muted={false}
+          />
+        </div>
+      </div>
     </motion.div>
   );
 };

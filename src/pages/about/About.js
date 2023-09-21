@@ -30,7 +30,7 @@ const About = () => {
 
   return (
     <motion.div
-      className="dark:bg-slate-600"
+      className="font-poiret dark:bg-slate-600"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
@@ -45,17 +45,17 @@ const About = () => {
       </div>
 
       {/* Our Mission section  */}
-      <div className="m-6  lg:m-20 2xl:mx-36">
+      <div className="m-6  lg:m-20 2xl:mx-20">
         <div className="my-6 flex flex-col">
-          <span className="text-4xl text-stone-600 dark:text-slate-200">
+          <span className="font-oswald text-4xl text-stone-600 dark:text-slate-200">
             Total Quality
           </span>
-          <span className="text-lg dark:text-slate-200">
+          <span className="font-oswald text-xl dark:text-slate-200">
             Behind this success is Total Quality Management
           </span>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 font-light  dark:text-slate-200 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 text-xl dark:text-slate-200 lg:grid-cols-3">
           <div>
             Brownearth Developments Ltd.an energetic and contemporary future in
             property services. We like to think different and be different, but
@@ -86,12 +86,12 @@ const About = () => {
       </div>
 
       {/* Design Excellence section  */}
-      <div ref={ref} className="m-6  lg:m-20 2xl:m-36">
+      <div ref={ref} className="m-6  lg:m-20 2xl:m-20">
         <motion.div animate={animation} className="my-6 flex flex-col">
-          <span className="text-4xl text-stone-600 dark:text-slate-200">
+          <span className="font-oswald text-4xl text-stone-600 dark:text-slate-200">
             Design Excellence
           </span>
-          <span className="text-lg dark:text-slate-200">
+          <span className="font-oswald text-xl dark:text-slate-200">
             Our buildings are characterized by their avant-garde design with
             contemporary lines and a clean look
           </span>
@@ -99,7 +99,7 @@ const About = () => {
 
         <motion.div
           animate={animation}
-          className="grid grid-cols-1 gap-6 font-light  dark:text-slate-200 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6  text-xl dark:text-slate-200 lg:grid-cols-3"
         >
           <div>
             Brownearth Developments Ltd.an energetic and contemporary future in
@@ -132,10 +132,10 @@ const About = () => {
 
       <div className="m-6 lg:m-20  2xl:m-36">
         <div className="my-6 flex flex-col">
-          <span className="my-4 text-4xl text-stone-600 dark:text-slate-200">
+          <span className="my-4 font-oswald text-4xl text-stone-600 dark:text-slate-200">
             Our Clients
           </span>
-          <span className="text-md dark:text-slate-200">
+          <span className="text-xl dark:text-slate-200">
             Our corporate clients have set high standards for themselves and
             expect us to continue to deliver unmatched quality. On the other
             hand our residential clientele are equally discerning, preserving
