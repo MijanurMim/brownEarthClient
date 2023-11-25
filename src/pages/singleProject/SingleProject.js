@@ -4,16 +4,9 @@ import ReactPlayer from "react-player";
 
 import "./SingleProject.css";
 
-import { motion, useAnimation } from "framer-motion";
-import { AiOutlinePoweroff } from "react-icons/ai";
-import { BiCctv } from "react-icons/bi";
-import { BsFillCarFrontFill } from "react-icons/bs";
-import { RiHomeGearFill } from "react-icons/ri";
-import { RxRocket } from "react-icons/rx";
-import { SiAdguard } from "react-icons/si";
-import singleProjectFloorPlan from "../../resources/floorplan.jpg";
+import cover from "../../resources/projectUrbanica/8.jpg";
 
-import { default as aboutCover } from "../../resources/projectUrbanica/1.jpg";
+import { motion, useAnimation } from "framer-motion";
 
 import projectImage2 from "../../resources/projectUrbanica/2.jpg";
 import projectImage6 from "../../resources/projectUrbanica/3.jpg";
@@ -22,8 +15,9 @@ import projectImage7 from "../../resources/projectUrbanica/5.jpg";
 import projectImage4 from "../../resources/projectUrbanica/6.jpg";
 import projectImage5 from "../../resources/projectUrbanica/7.jpg";
 import projectImage3 from "../../resources/projectUrbanica/8.jpg";
-import singleProjectPortrait from "../../resources/urbanicaPotrait.jpg";
-// import {} from "framer-motion/dist/framer-motion.dev";
+
+import brochure from "../../resources/dummy.pdf";
+
 import { useInView } from "react-intersection-observer";
 
 const images = [
@@ -144,20 +138,18 @@ const SingleProject = () => {
       <div className="group relative ">
         <img
           className="h-64 w-full object-cover lg:h-[550px]"
-          src={aboutCover}
+          src={cover}
           alt="..."
         />
       </div>
 
       {/* Project Description  */}
-      <div className="mx-10 mt-10 grid grid-cols-1 text-primary       lg:mx-20 xl:grid-cols-3">
+      <div className="section--spacing-x  mt-20 grid grid-cols-1 gap-6  text-primary     lg:mx-20 xl:grid-cols-3">
         {/* Left Section  */}
         <div className="d-flex justify-items-start ">
           <h4 className="font-oswald text-xl uppercase">brownearth</h4>
 
-          <h1 className="font-poiret text-6xl uppercase text-secondary">
-            urbanica
-          </h1>
+          <h2 className="heading--xxxl text-secondary">urbanica</h2>
 
           <h4 className="font-oswald text-xl ">
             I-Extension, Plot - 2475 <br /> Bashundhara R/A , Dhaka
@@ -165,117 +157,98 @@ const SingleProject = () => {
         </div>
 
         {/* Right Section  */}
-        <div className="text-justify font-poiret text-xl xl:col-span-2">
+        <div className="description--styles xl:col-span-2">
           <p>
-            BrownEarth Developments Ltd. , your premier partner in innovative
-            building development solutions. With a steadfast commitment to
-            excellence, creativity, and sustainability, we are at the forefront
-            of shaping skylines and communities through our exceptional
-            projects.At BrownEarth Developments Ltd. we believe that buildings
-            are more than just structures; they are living spaces that should
-            inspire, elevate, and transform lives. With a team of passionate
-            architects, engineers, designers, and construction experts, we
-            embark on each project as a unique journey, blending cutting-edge
-            technology with timeless design principles. BrownEarth Developments
-            Ltd. , your premier partner in innovative building development
-            solutions. With a steadfast commitment to excellence, creativity,
-            and sustainability, we are at the forefront of shaping skylines and
-            communities through our exceptional projects.At BrownEarth
-            Developments Ltd. we believe that buildings are more than just
-            structures; they are living spaces that should inspire, elevate, and
-            transform lives. With a team of passionate architects, engineers,
-            designers, and construction experts, we embark on each project as a
-            unique journey, blending cutting-edge technology with timeless
-            design principles.
+            Introducing "Brownearth Urbanica," an exceptional residential
+            project located within the burgeoning extension of the Bashundhara
+            residential area in Dhaka, Bangladesh. This development is a
+            testament to contemporary urban living, where modern architecture
+            and high-quality finishing materials come together to create a haven
+            of sophistication and luxury. Situated in a meticulously planned
+            area, residents of Brownearth Urbanica will enjoy the utmost
+            convenience, with all kinds of civic facilities within easy reach.
+            This project not only embodies the spirit of innovation and
+            aesthetic elegance but also underscores its commitment to providing
+            a superior lifestyle experience in the heart of Dhaka. Brownearth
+            Urbanica is set to redefine urban living and become the epitome of
+            refined living in this vibrant and dynamic city.
           </p>
         </div>
       </div>
 
       {/* Project Highlights  */}
-      <div className="text-oswald mx-10  my-32 mb-6    grid grid-cols-1  font-oswald  lg:mx-20 xl:grid-cols-3 ">
+      <div className="text-oswald  section--spacing-x  section--spacing-y    grid grid-cols-1  gap-6   font-oswald lg:grid-cols-3">
         {/* Left section  */}
-        <div className="flex flex-col items-start justify-center">
+        <div className="flex flex-col items-start justify-start gap-4">
           <div>
-            {" "}
-            <h1 className="font-semi text-3xl uppercase text-secondary">
+            <h2 className="font-semi text-3xl uppercase text-secondary">
               project highlights
-            </h1>
+            </h2>
           </div>
 
-          <div>
-            <ul className="mt-10  list-outside">
-              <li className="text-xl">
-                <span className="font-bold">Project : </span>
-                <span className="font-normal text-secondary">Residential</span>
-              </li>
+          <div className="list-outside  lg:mt-10">
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">Project : </span>
+              <span className="text-secondary">Residential</span>
+            </p>
 
-              <li className="text-xl">
-                <span className="font-bold">Number of apartments : </span>
-                <span className="font-normal text-secondary">8</span>
-              </li>
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">Number of apartments : </span>
+              <span className=" text-secondary">8</span>
+            </p>
 
-              <li className="text-xl">
-                <span className="font-bold">Size of apartments : </span>
-                <span className="font-normal text-secondary">
-                  1600 sft (approximately)
-                </span>
-              </li>
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">Size of apartments : </span>
+              <span className=" text-secondary">1600 sft (approximately)</span>
+            </p>
 
-              <li className="text-xl">
-                <span className="font-bold">Number of car parkings : </span>
-                <span className="font-normal text-secondary">10 nos.</span>
-              </li>
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">Number of car parkings : </span>
+              <span className=" text-secondary">10 nos.</span>
+            </p>
 
-              <li className="text-xl">
-                <span className="font-bold">RAJUK approval no : </span>
-                <span className="font-normal text-secondary"></span>
-              </li>
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">RAJUK approval no : </span>
+              <span className=" text-secondary"></span>
+            </p>
 
-              <li className="text-xl">
-                <span className="font-bold">Land area : </span>
-                <span className="font-normal text-secondary">5 Katha</span>
-              </li>
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">Land area : </span>
+              <span className=" text-secondary">5 Katha</span>
+            </p>
 
-              <li className="text-xl">
-                <span className="font-bold">Architectural Firm : </span>
-                <span className="font-normal text-secondary">
-                  Array Architects
-                </span>
-              </li>
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">Architectural Firm : </span>
+              <span className=" text-secondary">Array Architects</span>
+            </p>
 
-              <li className="text-xl">
-                <span className="font-bold">Facing : </span>
-                <span className="font-normal text-secondary">North</span>
-              </li>
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">Facing : </span>
+              <span className=" text-secondary">North</span>
+            </p>
 
-              <li className="text-xl">
-                <span className="font-bold">Front Road : </span>
-                <span className="font-normal text-secondary">25 Feet</span>
-              </li>
-            </ul>
+            <p className="text-xl font-light lg:font-normal">
+              <span className="">Front Road : </span>
+              <span className=" text-secondary">25 Feet</span>
+            </p>
           </div>
         </div>
         {/* Right section  */}
-        <div className=" xl:col-span-2">
-          {" "}
-          <div className="relative    h-[580px] overflow-hidden    ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7300.6722002749275!2d90.44431826504896!3d23.806644605037686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7da9bb9d1f7%3A0x2651406d463f1861!2sBrownEarth%20Urbanica!5e0!3m2!1sen!2sbd!4v1680330426846!5m2!1sen!2sbd"
+        <div className=" md:col-span-2">
+          <div className="relative    aspect-21/9 overflow-hidden lg:aspect-video xl:aspect-21/9  ">
+            <ReactPlayer
+              url="https://youtu.be/sJnr0l592PI"
               width="100%"
               height="100%"
-              className="absolute inset-0"
-              frameborder="0"
-              title="map"
-              marginheight="0"
-              marginwidth="0"
-              scrolling="yes"
-            ></iframe>
+              controls={true}
+              muted={false}
+            />
           </div>
         </div>
       </div>
 
       {/* Project Gallary  */}
-      <div className="mx-10 my-32 lg:mx-20  ">
+      <div className="  section--spacing-y lg:mx-20 ">
         <ImageGallery
           items={images}
           slideInterval={4000}
@@ -288,20 +261,43 @@ const SingleProject = () => {
         />
       </div>
 
-      {/* Project Video */}
-      <div className="mx-10 my-32 grid  grid-cols-3 items-center lg:mx-20">
-        <div className="">
-          <img src={singleProjectFloorPlan} alt="img" className="h-100" />
+      {/* Footprints Section  */}
+      <div className="mb-32 grid   grid-cols-1 gap-2    bg-neutral-300  md:grid-cols-3     ">
+        <div className=" section--spacing-x  heading--one  flex items-center py-6      uppercase tracking-wider text-white  ">
+          {/* Button  */}
+          <button className="rounded bg-transparent py-2 px-4  text-secondary hover:bg-gray-200">
+            <a
+              href={brochure}
+              download="brochure.pdf"
+              target="_blank"
+              className="inline-flex items-center gap-2"
+              rel="noreferrer"
+            >
+              <svg
+                class="mr-2 h-4 w-4 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+              </svg>
+              <span>BROCHURE</span>
+            </a>
+          </button>
         </div>
-
-        <div className="col-span-2 aspect-21/9    ">
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=lC6b85dQQCI"
-            width="100%"
-            height="100%"
-            controls={true}
-            muted={false}
-          />
+        <div className=" md:col-span-2">
+          <div className="relative col-span-2 aspect-21/9    overflow-hidden   ">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3650.337286454815!2d90.4424274!3d23.8066024!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7dda78ef333%3A0x56f7b08d7d647785!2sBrownearth%20Urbanica!5e0!3m2!1sen!2sbd!4v1700916656871!5m2!1sen!2sbd"
+              width="100%"
+              height="100%"
+              className="absolute inset-0"
+              frameborder="0"
+              title="map"
+              marginheight="0"
+              marginwidth="0"
+              scrolling="yes"
+            ></iframe>
+          </div>
         </div>
       </div>
     </motion.div>

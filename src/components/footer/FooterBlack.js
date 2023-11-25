@@ -1,28 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import logo from "../../resources/logo-transparent.png";
 
 const FooterBlack = () => {
   return (
     <div className=" bottom-0 bg-neutral-300 ">
       {/* main footer section  */}
-      <div className="grid grid-cols-1 gap-4 py-10  text-white md:gap-6  lg:mx-20  xl:grid-cols-5 ">
+      <div className="section--spacing-x flex flex-col   justify-between  gap-10 py-10 text-white min-[530px]:flex-row   ">
         <div className="flex flex-col justify-center gap-4">
           <div className=" flex cursor-pointer  items-center justify-start    ">
             <span className="  ">
-              <img src={logo} alt="" className=" w-60 object-cover  " />
+              <img src={logo} alt="" className="w-40 object-cover md:w-48  " />
             </span>
           </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
 
         <div className="flex flex-col font-oswald text-primary">
           <h4 className="font-oswald text-xl ">
             5/1 , Block E , level -05, E1 <br /> Lalmatia,Dhaka , Bangladesh
           </h4>
-          <h4 className="font-oswald text-xl ">Phone : +88 01717196696</h4>
+          <h4 className="font-oswald text-xl ">Phone : +88 01329733780</h4>
+          <h4 className="font-oswald text-xl ">Phone : +88 01329733783</h4>
           <h4 className="font-oswald text-xl ">
             Email : brownearthdev.ltd@gmail.com
           </h4>

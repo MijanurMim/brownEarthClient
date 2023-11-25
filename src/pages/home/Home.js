@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
 import ReactPlayer from "react-player";
-
+import { Link } from "react-router-dom";
 import sal from "sal.js";
 
 import Slider from "../../components/slider/Slider";
-import FeaturedWorks from "../featuredWorks/FeaturedWorks";
+// import FeaturedWorks from "../featuredWorks/FeaturedWorks";
+
+import featured2 from "../../resources/projectUrbanica/4.jpg";
+
+import featured1 from "../../resources/humaira-bashir/humaira-5.jpg";
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +20,7 @@ const Home = () => {
   return (
     <>
       <div
-        className="dark:bg-slate-600"
+        className=""
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.3 } }}
@@ -25,41 +29,31 @@ const Home = () => {
         <Slider />
 
         {/* Home About Section  */}
-        <div className="mt-16 font-poiret lg:mx-20">
+        <div className=" section--spacing-x mt-16 font-poiret ">
           <div
             data-sal="slide-right"
             data-sal-delay="300"
             data-sal-duration="1200"
             data-sal-easing="easeInOutSine"
           >
-            <h1 className="text-4xl uppercase">
+            <h2 className="heading--one mb-5 font-semibold text-secondary ">
               Building a legacy of excellence
-            </h1>
+            </h2>
           </div>
-          <div className="mt-16 grid grid-cols-4">
-            <div></div>
+          <div className=" grid    grid-cols-4">
+            <div className="hidden md:block"></div>
             <div
-              className="col-span-3"
+              className="col-span-4 md:col-span-3 "
               data-sal="slide-up"
               data-sal-delay="300"
               data-sal-duration="1200"
               data-sal-easing="easeInOutSine"
             >
-              <p className="text-justify text-xl">
-                BrownEarth Developments Ltd. , your premier partner in
-                innovative building development solutions. With a steadfast
-                commitment to excellence, creativity, and sustainability, we are
-                at the forefront of shaping skylines and communities through our
-                exceptional projects.At BrownEarth Developments Ltd. we believe
-                that buildings are more than just structures; they are living
-                spaces that should inspire, elevate, and transform lives. With a
-                team of passionate architects, engineers, designers, and
-                construction experts, we embark on each project as a unique
-                journey, blending cutting-edge technology with timeless design
-                principles. BrownEarth Developments Ltd. , your premier partner
-                in innovative building development solutions. With a steadfast
-                commitment to excellence, creativity, and sustainability, we are
-                at the forefront of shaping skylines and communities through our
+              <p className="description--styles">
+                BrownEarth Developments Ltd. Your premier partner in innovative
+                building development solutions. With a steadfast commitment to
+                excellence, creativity, and sustainability, we are at the
+                forefront of shaping skylines and communities through our
                 exceptional projects.At BrownEarth Developments Ltd. we believe
                 that buildings are more than just structures; they are living
                 spaces that should inspire, elevate, and transform lives. With a
@@ -73,12 +67,77 @@ const Home = () => {
         </div>
 
         {/* Featured Works Section  */}
-        <FeaturedWorks />
+        {/* <FeaturedWorks /> */}
+
+        {/***  Features Work Section  ***/}
+        <div className=" section--spacing-x  my-10 grid  grid-cols-1   gap-y-1 md:grid-cols-3 md:gap-2 ">
+          <div className="flex flex-col items-start justify-center bg-stone-200 p-4 lg:p-10 ">
+            <Link to="/project-two">
+              <h4 className="font-oswald text-xl uppercase">
+                BROWNEARTH HOMAYRA BASHIR
+              </h4>
+              <h2 className="heading--one text-secondary hover:text-primary">
+                BENCHMARK
+              </h2>
+            </Link>
+
+            <h4 className="font-oswald text-xl ">
+              Sector 16, Road 503 , <br /> Plot 001 Jolshiri Abashon
+            </h4>
+          </div>
+
+          {/* left thumb  */}
+          <div className="group relative col-span-2  cursor-pointer font-poiret">
+            <img className=" aspect-21/9 object-cover" src={featured1} alt="" />
+            <div class="bg-blur absolute top-0 left-0 hidden h-0  w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500 sm:flex">
+              <h2 class="text-lg font-bold uppercase tracking-wide text-white lg:text-xl 2xl:text-2xl">
+                HOMAYRA BASHIR BENCHMARK
+              </h2>
+              <Link
+                to="/project-two"
+                class="mt-5 rounded-full bg-white px-8 py-3 duration-300 hover:bg-stone-300 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700 "
+              >
+                Project Details
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className=" section--spacing-x  my-10 grid  grid-cols-1  gap-y-1 md:grid-cols-3 md:gap-2">
+          <div className="flex flex-col items-start justify-center bg-stone-200 p-4 lg:p-10">
+            <Link to="/project">
+              <h4 className="font-oswald text-xl uppercase">brownearth</h4>
+              <h2 className="heading--one text-secondary hover:text-primary">
+                urbanica
+              </h2>
+            </Link>
+            <h4 className="font-oswald text-xl ">
+              I-Extension, Plot - 2475 <br /> Bashundhara R/A , Dhaka
+            </h4>
+          </div>
+
+          {/* left thumb  */}
+          <div className="group relative col-span-2  cursor-pointer font-poiret">
+            <img className=" aspect-21/9 object-cover" src={featured2} alt="" />
+            <div class="bg-blur absolute top-0 left-0 hidden h-0 w-full flex-col items-center justify-center border-b-2 opacity-0 backdrop-blur-md duration-500 group-hover:h-[50%] group-hover:opacity-100 dark:bg-slate-500 sm:flex">
+              <h2 class="text-lg font-bold uppercase tracking-wide text-white lg:text-xl 2xl:text-2xl">
+                Urbanica
+              </h2>
+              <Link
+                to="/project"
+                class="mt-5 rounded-full bg-white px-8 py-3 duration-300 hover:bg-stone-300 dark:bg-slate-600 dark:text-slate-200 dark:hover:bg-slate-700 "
+                href="#"
+              >
+                Project Details
+              </Link>
+            </div>
+          </div>
+        </div>
 
         {/* Video Section  */}
-        <div className="mt-36 aspect-video lg:mx-20   ">
+        <div className=" aspect-video lg:mx-20   ">
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=lC6b85dQQCI"
+            url="https://youtu.be/sJnr0l592PI"
             width="100%"
             height="80%"
             controls={true}
@@ -87,15 +146,14 @@ const Home = () => {
         </div>
 
         {/* Footprints Section  */}
-        <div className="mb-6 grid  grid-cols-1 gap-2  bg-neutral-300 xl:grid-cols-3        ">
-          <div className=" mx-10  flex  font-poiret text-4xl font-bold uppercase    tracking-wider   text-white md:items-center lg:mx-20 ">
+        <div className="mb-32 grid  grid-cols-1 gap-2  bg-neutral-300 md:grid-cols-3        ">
+          <div className=" section--spacing-x  heading--one  flex items-center py-6    font-bold   uppercase tracking-wider text-secondary  ">
             FOOTPRINTS
           </div>
-          <div className=" xl:col-span-2">
-            {" "}
+          <div className=" md:col-span-2">
             <div className="relative    h-[580px] overflow-hidden   bg-gray-300 ">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7300.6722002749275!2d90.44431826504896!3d23.806644605037686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7da9bb9d1f7%3A0x2651406d463f1861!2sBrownEarth%20Urbanica!5e0!3m2!1sen!2sbd!4v1680330426846!5m2!1sen!2sbd"
+                src="https://www.google.com.qa/maps/d/embed?mid=1vInsFJilsulIcidRH45aOFEZOAJ_qv8&ehbc=2E312F"
                 width="100%"
                 height="100%"
                 className="absolute inset-0"

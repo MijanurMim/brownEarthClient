@@ -9,14 +9,14 @@ body {
 }
 
 .nav-hover-effect {
-  @apply relative block  rounded    border-b border-stone-600  bg-stone-700 py-2 px-1 text-xs tracking-[1px] text-primary transition-all   duration-300     hover:text-secondary md:border-0 md:bg-transparent  xl:pl-3 xl:pr-1 xl:text-lg;
+  @apply relative  block     border-b border-stone-600   bg-transparent py-2 px-1 text-right text-xs tracking-[1px]   text-white     transition-all duration-300 hover:text-secondary md:border-0 md:pl-3 md:pr-1 md:text-lg md:text-primary;
 }
 .nav-hover-effect::after {
   @apply absolute left-3 -bottom-[1px] h-[1px] w-[0%] rounded-xl bg-secondary duration-500 content-[''];
 }
 
 .nav-hover-effect:hover::after {
-  @apply w-[80%];
+  @apply w-[100%] lg:w-[80%];
 }
 .nav-sub-items {
   @apply block  py-2 px-4 text-sm text-secondary transition-all duration-150 hover:scale-105  hover:text-stone-600  xl:text-sm;
@@ -31,4 +31,25 @@ body {
 
 .footer-item-hover {
   @apply mr-6 text-stone-800 decoration-stone-600 duration-200  hover:text-secondary hover:underline;
+}
+
+/* Spacing  */
+.section--spacing-x {
+  @apply mx-5 md:mx-10 lg:mx-20;
+}
+.section--spacing-y {
+  @apply my-10 md:my-20 lg:my-32;
+}
+
+/* Typography  */
+.heading--one {
+  @apply font-poiret text-3xl  uppercase md:text-4xl;
+}
+
+.heading--xxxl {
+  @apply font-poiret text-3xl  uppercase md:text-6xl;
+}
+
+.description--styles {
+  @apply text-justify font-oswald text-lg font-thin md:text-xl;
 }

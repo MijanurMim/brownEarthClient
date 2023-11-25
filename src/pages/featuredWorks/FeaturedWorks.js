@@ -16,10 +16,6 @@ const FeaturedWorks = () => {
     <div>
       {/* Features Work Section  */}
       <div className="m-10  font-poiret lg:mx-20  lg:my-10        lg:gap-6  ">
-        <div className="mt-36 mb-12">
-          <h1 className="text-4xl uppercase">AVAILABLE PROJECTS FOR SALE</h1>
-        </div>
-
         {/* Project Cards  */}
         <div className="grid  grid-cols-1 gap-5 lg:grid-cols-3">
           {" "}

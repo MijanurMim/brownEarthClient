@@ -2,7 +2,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-import contactCover from "../../resources/slider/3.jpg";
+import contactCover from "../../resources/humaira-bashir/humaira-12.jpg";
 import ContactForm from "./ContactForm";
 const Contact = () => {
   return (

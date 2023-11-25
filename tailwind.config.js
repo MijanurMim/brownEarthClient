@@ -5,7 +5,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+      montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
       oswald: ["Oswald", ...defaultTheme.fontFamily.sans],
       poiret: ["Poiret One", ...defaultTheme.fontFamily.sans],
     },
@@ -17,20 +17,23 @@ module.exports = {
         color: "black",
       },
     },
+
     extend: {
       colors: {
         primary: "#231709",
         secondary: "#5e2c04",
       },
+
       aspectRatio: {
         "21/9": "21 / 9",
         "3/1": "3/1",
       },
+
       backgroundImage: {
         homeParalax:
           'url("https://www.credencehousingltd.com/admin/uploads/page/parallax-image/1920x930/1665920358BLLwU_m.jpg")',
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  // plugins: [require("flowbite/plugin")],
 };

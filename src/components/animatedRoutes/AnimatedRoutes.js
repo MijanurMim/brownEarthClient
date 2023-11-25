@@ -7,6 +7,7 @@ import Contact from "../../pages/contact/Contact";
 import Home from "../../pages/home/Home";
 import Projects from "../../pages/projects/Projects";
 import SingleProject from "../../pages/singleProject/SingleProject";
+import SingleProjectTwo from "../../pages/singleProjectTwo/SingleProjectTwo";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -17,6 +18,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/project" element={<SingleProject />} />
+        <Route path="/project-two" element={<SingleProjectTwo />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
