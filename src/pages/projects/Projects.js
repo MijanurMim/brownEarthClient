@@ -44,6 +44,10 @@ const Projects = () => {
           src={contactCover}
           alt="..."
         />
+
+        <div className=" tracking-in-expand section--spacing-x hero--text-inner backdrop-blur-sm ">
+          <p className="tracking-in-expand   heading--xxxl  ">Projects</p>
+        </div>
       </div>
 
       {/***  Features Work Section  ***/}

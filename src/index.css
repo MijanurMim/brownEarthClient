@@ -9,7 +9,7 @@ body {
 }
 
 .nav-hover-effect {
-  @apply relative  block     border-b border-stone-600   bg-transparent py-2 px-1 text-right text-xs tracking-[1px]   text-white     transition-all duration-300 hover:text-secondary md:border-0 md:pl-3 md:pr-1 md:text-lg md:text-primary;
+  @apply relative  block border-b    border-stone-600 bg-transparent   py-2 px-1 text-right  text-base font-light   tracking-[1px]     text-white transition-all duration-300 hover:text-secondary md:border-0 md:pl-3 md:pr-1 md:text-primary;
 }
 .nav-hover-effect::after {
   @apply absolute left-3 -bottom-[1px] h-[1px] w-[0%] rounded-xl bg-secondary duration-500 content-[''];
@@ -43,13 +43,32 @@ body {
 
 /* Typography  */
 .heading--one {
-  @apply font-poiret text-3xl  uppercase md:text-4xl;
+  @apply font-poiret text-2xl  uppercase xl:text-3xl;
 }
 
 .heading--xxxl {
-  @apply font-poiret text-3xl  uppercase md:text-6xl;
+  @apply font-poiret text-lg uppercase md:text-2xl xl:text-3xl;
+}
+
+.project--title {
+  @apply font-poiret text-xl uppercase text-secondary  hover:text-primary md:text-2xl;
+}
+.project--title-btn {
+  @apply font-poiret text-xl uppercase text-white md:text-2xl;
+}
+
+.sub--title {
+  @apply font-oswald text-sm font-light uppercase lg:text-base;
 }
 
 .description--styles {
-  @apply text-justify font-oswald text-lg font-thin md:text-xl;
+  @apply text-justify font-oswald text-lg font-thin;
+}
+
+.hero--text-banner {
+  @apply absolute top-[80%] text-left md:top-[86%]  2xl:top-[70%];
+}
+
+.hero--text-inner {
+  @apply absolute top-[80%] text-left text-white;
 }

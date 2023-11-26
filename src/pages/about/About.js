@@ -42,6 +42,10 @@ const About = () => {
           src={aboutCover}
           alt="..."
         />
+
+        <div className=" tracking-in-expand section--spacing-x hero--text-inner backdrop-blur-sm ">
+          <p className="tracking-in-expand   heading--xxxl  ">About us</p>
+        </div>
       </div>
 
       {/* Our Mission section  */}

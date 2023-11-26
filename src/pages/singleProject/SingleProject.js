@@ -16,8 +16,6 @@ import projectImage4 from "../../resources/projectUrbanica/6.jpg";
 import projectImage5 from "../../resources/projectUrbanica/7.jpg";
 import projectImage3 from "../../resources/projectUrbanica/8.jpg";
 
-import brochure from "../../resources/dummy.pdf";
-
 import { useInView } from "react-intersection-observer";
 
 const images = [
@@ -237,7 +235,7 @@ const SingleProject = () => {
         <div className=" md:col-span-2">
           <div className="relative    aspect-21/9 overflow-hidden lg:aspect-video xl:aspect-21/9  ">
             <ReactPlayer
-              url="https://youtu.be/sJnr0l592PI"
+              url=""
               width="100%"
               height="100%"
               controls={true}
@@ -265,23 +263,22 @@ const SingleProject = () => {
       <div className="mb-32 grid   grid-cols-1 gap-2    bg-neutral-300  md:grid-cols-3     ">
         <div className=" section--spacing-x  heading--one  flex items-center py-6      uppercase tracking-wider text-white  ">
           {/* Button  */}
-          <button className="rounded bg-transparent py-2 px-4  text-secondary hover:bg-gray-200">
-            <a
-              href={brochure}
+          <button className="inline-flex items-center gap-2 rounded  bg-transparent py-2 px-4 text-secondary hover:bg-gray-200">
+            <svg
+              class="mr-2 h-4 w-4 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+            </svg>
+            <span>BROCHURE</span>
+            {/* <a
+              href="#"
               download="brochure.pdf"
               target="_blank"
               className="inline-flex items-center gap-2"
               rel="noreferrer"
-            >
-              <svg
-                class="mr-2 h-4 w-4 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-              </svg>
-              <span>BROCHURE</span>
-            </a>
+            ></a> */}
           </button>
         </div>
         <div className=" md:col-span-2">

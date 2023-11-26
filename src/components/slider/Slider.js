@@ -21,27 +21,43 @@ const Slider = () => {
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          // pagination={{
-          //   clickable: true,
+          // autoplay={{
+          //   delay: 8000,
+          //   disableOnInteraction: false,
           // }}
+
           // navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="xl:max-h-[800px] "
+          // modules={[Autoplay, Pagination, Navigation]}
+          className=" xl:max-h-[850px] "
         >
           <SwiperSlide>
             <img className="w-full object-cover" src={sliderImg1} alt="img" />
+
+            <div className=" tracking-in-expand section--spacing-x hero--text-banner backdrop-blur-sm ">
+              <p className="tracking-in-expand   heading--xxxl  text-white">
+                committed for exception
+              </p>
+            </div>
           </SwiperSlide>
 
           <SwiperSlide>
             <img className="w-full object-cover" src={sliderImg2} alt="img" />
+
+            <div className="tracking-in-expand section--spacing-x hero--text-banner backdrop-blur-sm ">
+              <p className="tracking-in-expand   heading--xxxl  text-white">
+                committed for exception
+              </p>
+            </div>
           </SwiperSlide>
 
           <SwiperSlide>
             <img className="w-full object-cover" src={sliderImg3} alt="img" />
+
+            <div className=" tracking-in-expand section--spacing-x hero--text-banner backdrop-blur-sm ">
+              <p className="tracking-in-expand   heading--xxxl  text-white">
+                committed for exception
+              </p>
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>

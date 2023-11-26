@@ -19,6 +19,10 @@ const Contact = () => {
           src={contactCover}
           alt="..."
         />
+
+        <div className=" tracking-in-expand section--spacing-x hero--text-inner backdrop-blur-sm ">
+          <p className="tracking-in-expand   heading--xxxl  ">contact us</p>
+        </div>
       </div>
       <ContactForm />
     </motion.div>
