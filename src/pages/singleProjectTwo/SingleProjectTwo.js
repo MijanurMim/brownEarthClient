@@ -7,11 +7,11 @@ import { useCollapse } from "react-collapsed";
 
 import "./SingleProjectTwo.css";
 
-import cover from "../../resources/humaira-bashir/humaira-5.jpg";
+import cover from "../../resources/humaira-bashir/humaira-17.jpg";
 
 import { motion, useAnimation } from "framer-motion";
 
-import projectImage1 from "../../resources/humaira-bashir/humaira-5.jpg";
+import projectImage1 from "../../resources/humaira-bashir/humaira-17.jpg";
 import projectImage6 from "../../resources/humaira-bashir/humaira-12.jpg";
 import projectImage8 from "../../resources/humaira-bashir/humaira-14.jpg";
 import projectImage7 from "../../resources/humaira-bashir/humaira-17.jpg";
@@ -116,20 +116,20 @@ const SingleProjectTwo = () => {
       <div className="section--spacing-x mt-20 grid grid-cols-1 gap-6  text-primary     lg:mx-20 xl:grid-cols-3">
         {/* Left Section  */}
         <div className="d-flex justify-items-start ">
-          <h4 className="font-oswald text-xl uppercase">
+          <h4 className="font-oswald text-xl font-light uppercase">
             brownearth Humayra Bashir
           </h4>
 
           <h2 className="heading--xxxl text-secondary">Benchmark</h2>
 
-          <h4 className="font-oswald text-xl ">
+          <h4 className="font-oswald text-xl font-light ">
             Sector -16 , Road 503 A , Plot- 001 , <br />
             Jolshiri,Abashon,Dhaka
           </h4>
         </div>
 
         {/* Right Section  */}
-        <div className="description--styles  xl:col-span-2">
+        <div className="description--styles   xl:col-span-2">
           <p className="mb-4">
             Brownearth Humayra Bashir Benchmark" is a luxury residential project
             with eight high-end apartments and one mezzanine floor, featuring
@@ -177,54 +177,58 @@ const SingleProjectTwo = () => {
       <div className="text-oswald  section--spacing-x  section--spacing-y    grid grid-cols-1  gap-6   font-oswald lg:grid-cols-3 ">
         {/* Left section  */}
         <div className="flex flex-col items-start justify-start gap-4">
-          <h2 className="font-semi text-3xl uppercase text-secondary">
+          <h2 className="font-semi text-3xl font-light uppercase text-secondary">
             project highlights
           </h2>
 
           <div className=" list-outside lg:mt-10 ">
             <p className=" text-xl font-light lg:font-normal">
-              <span className="">Project : </span>
-              <span className="text-secondary">Residential</span>
+              <span className="font-light">Project : </span>
+              <span className="font-thin text-secondary">Residential</span>
+            </p>
+
+            <p className="text-xl  lg:font-normal">
+              <span className="font-light">Number of apartments : </span>
+              <span className="font-thin text-secondary">8</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Number of apartments : </span>
-              <span className=" text-secondary">8</span>
+              <span className="font-light">Size of apartments : </span>
+              <span className=" font-thin text-secondary">
+                2850 sft (approximately)
+              </span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Size of apartments : </span>
-              <span className=" text-secondary">2850 sft (approximately)</span>
+              <span className="font-light">Number of car parkings : </span>
+              <span className=" font-thin text-secondary">10 nos.</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Number of car parkings : </span>
-              <span className=" text-secondary">10 nos.</span>
+              <span className="font-light">RAJUK approval no : </span>
+              <span className=" font-thin text-secondary"></span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">RAJUK approval no : </span>
-              <span className=" text-secondary"></span>
+              <span className="font-light">Land area : </span>
+              <span className=" font-thin text-secondary">5 Katha</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Land area : </span>
-              <span className=" text-secondary">5 Katha</span>
+              <span className="font-light">Architectural Firm : </span>
+              <span className=" font-thin text-secondary">
+                Array Architects
+              </span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Architectural Firm : </span>
-              <span className=" text-secondary">Array Architects</span>
+              <span className="font-light">Facing : </span>
+              <span className=" font-thin text-secondary">South</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Facing : </span>
-              <span className=" text-secondary">South</span>
-            </p>
-
-            <p className="text-xl font-light lg:font-normal">
-              <span className="">Front Road : </span>
-              <span className=" text-secondary">
+              <span className="font-light">Front Road : </span>
+              <span className=" font-thin text-secondary">
                 South - 35feet, West - 35feet
               </span>
             </p>

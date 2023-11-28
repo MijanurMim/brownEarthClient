@@ -19,7 +19,7 @@ const ContactForm = () => {
             ></iframe>
           </div>
           <div className=" flex w-full flex-col  dark:bg-slate-600  ">
-            <h2 className="title-font mb-1 text-3xl font-medium text-secondary dark:text-slate-200">
+            <h2 className="title-font mb-1 text-3xl font-light  text-secondary dark:text-slate-200">
               CONTACT US
             </h2>
             <p className="mb-5 leading-relaxed text-gray-600  dark:text-slate-200">
@@ -66,7 +66,7 @@ const ContactForm = () => {
                 className="h-32 w-full resize-none rounded border border-gray-300 bg-white py-1 px-3 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
               ></textarea>
             </div>
-            <button className="rounded border-0 bg-stone-500 py-2  px-6 text-lg text-white duration-300 hover:bg-indigo-600 focus:outline-none dark:bg-slate-500 dark:hover:bg-slate-700">
+            <button className="rounded border-0 bg-stone-500 py-2  px-6 text-lg font-light text-white duration-300 hover:bg-indigo-600 focus:outline-none dark:bg-slate-500 dark:hover:bg-slate-700">
               SUBMIT
             </button>
           </div>

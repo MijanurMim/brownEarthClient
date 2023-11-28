@@ -144,7 +144,7 @@ const SingleProject = () => {
       {/* Project Description  */}
       <div className="section--spacing-x  mt-20 grid grid-cols-1 gap-6  text-primary     lg:mx-20 xl:grid-cols-3">
         {/* Left Section  */}
-        <div className="d-flex justify-items-start ">
+        <div className="d-flex justify-items-start font-light ">
           <h4 className="font-oswald text-xl uppercase">brownearth</h4>
 
           <h2 className="heading--xxxl text-secondary">urbanica</h2>
@@ -179,55 +179,57 @@ const SingleProject = () => {
         {/* Left section  */}
         <div className="flex flex-col items-start justify-start gap-4">
           <div>
-            <h2 className="font-semi text-3xl uppercase text-secondary">
+            <h2 className="text-3xl font-light uppercase text-secondary">
               project highlights
             </h2>
           </div>
 
           <div className="list-outside  lg:mt-10">
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Project : </span>
-              <span className="text-secondary">Residential</span>
+              <span className="font-light">Project : </span>
+              <span className="font-thin text-secondary">Residential</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Number of apartments : </span>
-              <span className=" text-secondary">8</span>
+              <span className="font-light">Number of apartments : </span>
+              <span className="font-thin text-secondary">8</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Size of apartments : </span>
-              <span className=" text-secondary">1600 sft (approximately)</span>
+              <span className="font-light">Size of apartments : </span>
+              <span className="font-thin text-secondary">
+                1600 sft (approximately)
+              </span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Number of car parkings : </span>
-              <span className=" text-secondary">10 nos.</span>
+              <span className="font-light">Number of car parkings : </span>
+              <span className="font-thin text-secondary">10 nos.</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">RAJUK approval no : </span>
-              <span className=" text-secondary"></span>
+              <span className="font-light">RAJUK approval no : </span>
+              <span className="font-thin text-secondary"></span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Land area : </span>
-              <span className=" text-secondary">5 Katha</span>
+              <span className="font-light">Land area : </span>
+              <span className="font-thin text-secondary">5 Katha</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Architectural Firm : </span>
-              <span className=" text-secondary">Array Architects</span>
+              <span className="font-light">Architectural Firm : </span>
+              <span className="font-thin text-secondary">Array Architects</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Facing : </span>
-              <span className=" text-secondary">North</span>
+              <span className="font-light">Facing : </span>
+              <span className="font-thin text-secondary">North</span>
             </p>
 
             <p className="text-xl font-light lg:font-normal">
-              <span className="">Front Road : </span>
-              <span className=" text-secondary">25 Feet</span>
+              <span className="font-light">Front Road : </span>
+              <span className=" font-thin text-secondary">25 Feet</span>
             </p>
           </div>
         </div>

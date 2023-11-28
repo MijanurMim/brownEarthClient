@@ -1,10 +1,10 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 import aboutCover from "../../resources/humaira-bashir/humaira-10.jpg";
-import aboutCover3 from "../../resources/humaira-bashir/humaira-4.jpg";
-import aboutCover2 from "../../resources/humaira-bashir/humaira-5.jpg";
+
 // import {} from "framer-motion/dist/framer-motion.dev";
 import { useInView } from "react-intersection-observer";
+import aboutThumb from "../../resources/humaira-bashir/humaira-22.jpg";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -48,92 +48,54 @@ const About = () => {
         </div>
       </div>
 
-      {/* Our Mission section  */}
-      <div className="m-6  lg:m-20 2xl:mx-20">
-        <div className="my-6 flex flex-col">
-          <h2 className="heading--one  font-semibold text-secondary ">
-            Total Quality
-          </h2>
-          <p className="text-xl font-light lg:text-2xl ">
-            Behind this success is Total Quality Management
-          </p>
+      <div className="section--spacing-x section--spacing-y grid grid-cols-1 gap-y-6 sm:gap-x-10  md:grid-cols-3 lg:gap-y-0">
+        <div className="">
+          <img src={aboutThumb} alt="img" />
         </div>
 
-        <div className="grid grid-cols-1 gap-6  text-xl dark:text-slate-200 lg:grid-cols-3">
-          <p className="description--styles">
-            Brownearth Developments Ltd.an energetic and contemporary future in
-            property services. We like to think different and be different, but
-            we combine that with our traditional and familiar practices of
-            providing no nonsense, down to earth advice and service.
-          </p>
-
-          <p className="description--styles">
-            We offer an advanced and innovative approach towards real estate and
-            how to market, lease and sell property using new and progressive
-            marketing platforms and methods, particularly within the
-            ever-expanding digital era of marketing and all that it has to
-            offer.
-          </p>
-
-          <p className="description--styles">
-            Brownearth Developments Ltd. we love talking about real estate and
-            connecting with people from all walks of life. We would invite
-            anyone to drop in, speak to our team and see what we are all about!
+        <div className=" md:col-span-2">
+          <p className="description--styles ">
+            BrownEarth Developments Ltd. stands as a distinguished and premier
+            partner in the realm of innovative building development solutions.
+            The company's core values of excellence, creativity, and
+            sustainability are the driving forces behind its leading position,
+            placing it at the forefront of shaping skylines and communities
+            through exceptional projects.
+            <br />
+            <br />
+            At the heart of BrownEarth's philosophy is a profound belief that
+            buildings transcend their functional roles; they are dynamic living
+            spaces that hold the potential to inspire, elevate, and transform
+            lives. This perspective is a guiding principle that permeates every
+            aspect of the company's work.
+            <br />
+            <br />
+            The strength of BrownEarth lies in its dedicated team of passionate
+            professionals, including architects, engineers, designers, and
+            construction experts. Together, they approach each project as a
+            unique journey, infusing it with creativity and a commitment to
+            excellence. The fusion of cutting-edge technology and timeless
+            design principles distinguishes BrownEarth's projects, resulting in
+            spaces that not only meet practical needs but also evoke a sense of
+            aesthetic brilliance.
+            <br /> <br />
+            A key pillar of BrownEarth's identity is its unwavering commitment
+            to sustainability. The company recognizes the significant impact
+            that buildings can have on the environment and, in response,
+            incorporates eco-friendly practices and materials into its projects.
+            By doing so, BrownEarth strives to create developments that are not
+            only visually stunning but also environmentally conscious, leaving a
+            positive legacy for future generations.
+            <br /> <br />
+            In essence, BrownEarth Developments Ltd. is more than a builder; it
+            is a visionary partner. The company's approach to each project is
+            characterized by a dedication to crafting spaces that go beyond the
+            ordinary, spaces that inspire and uplift communities. As a result,
+            BrownEarth's portfolio is a testament to its ability to seamlessly
+            blend state-of-the-art technology with enduring design principles,
+            creating living environments that stand as timeless works of art.
           </p>
         </div>
-      </div>
-
-      <div>
-        <img
-          className="h-64 w-full object-cover grayscale  lg:h-[550px]"
-          src={aboutCover2}
-          alt=""
-        />
-      </div>
-
-      {/* Design Excellence section  */}
-      <div ref={ref} className="m-6  lg:m-20 2xl:m-20">
-        <motion.div animate={animation} className="my-6 flex flex-col">
-          <h2 className="heading--one  font-semibold text-secondary ">
-            Design Excellence
-          </h2>
-          <p className="text-xl font-light lg:text-2xl ">
-            Our buildings are characterized by their avant-garde design with
-            contemporary lines and a clean look
-          </p>
-        </motion.div>
-
-        <motion.div
-          animate={animation}
-          className="grid grid-cols-1 gap-6  font-oswald text-xl dark:text-slate-200 lg:grid-cols-3"
-        >
-          <p className="description--styles">
-            Brownearth Developments Ltd.an energetic and contemporary future in
-            property services. We like to think different and be different, but
-            we combine that with our traditional and familiar practices of
-            providing no nonsense, down to earth advice and service.
-          </p>
-          <p className="description--styles">
-            We offer an advanced and innovative approach towards real estate and
-            how to market, lease and sell property using new and progressive
-            marketing platforms and methods, particularly within the
-            ever-expanding digital era of marketing and all that it has to
-            offer.
-          </p>
-          <p className="description--styles">
-            Brownearth Developments Ltd. we love talking about real estate and
-            connecting with people from all walks of life. We would invite
-            anyone to drop in, speak to our team and see what we are all about!
-          </p>
-        </motion.div>
-      </div>
-
-      <div className="section--spacing-y">
-        <img
-          className="h-64 w-full object-cover grayscale  lg:h-[550px]"
-          src={aboutCover3}
-          alt=""
-        />
       </div>
     </motion.div>
   );
